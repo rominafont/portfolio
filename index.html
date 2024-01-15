@@ -15,14 +15,157 @@
 </head>
 
 <body>
-    <nav class="NavTop">
+    <a class="Title Logo" href="./index.html">romina font</a>
+    <!-- PC Menu -->
+    <nav class="NavTop" id="navTopPC">
         <ul class="NavTop-box">
-            <li class="NavTop-item"><a href="./projects.html" class="nav-link">Projects</a></li>
-            <li class="NavTop-item"><a href="./gallery.html" class="-link">Gallery</a></li>
-            <li class="NavTop-item"><a href="./about.html" class="nav-link active">About</a></li>
+            <li class="NavTop-item"><a class="NavTop-link" href="./projects.html">Projects</a></li>
+            <li class="NavTop-item"><a class="NavTop-link" href="./gallery.html">Gallery</a></li>
+            <li class="NavTop-item"><a class="NavTop-link" href="./about.html">About</a></li>
         </ul>
     </nav>
 
+    <!-- Tablet V /Mobile Menu -->
+    <nav class="NavTop-mobile" id="NavTopMobile">
+        <button class="NavTop-mobile-btn" onclick="navTopModal()">+</button>
+        <div class="NavTop-modal" id="NavTopModal">
+            <ul>
+                <li><a class="NavTop-modal-link" href="./projects.html">Projects</a></li>
+                <li><a class="NavTop-modal-link" href="./gallery.html">Gallery</a></li>
+                <li><a class="NavTop-modal-link" href="./about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="HeroSection HeroSection-bg">
+        <h1 class="HeroSection-text">Romina Font is a visual designer and creative currently living in Valencia. She wants to help by creating new powerful and innovative brands.
+            You can find her reading poems in a lovely garden.</h1>
+    </section>
+
+    <section>
+        <h2>uxui</h2>
+        <h2>design</h2>
+        <h2>illustration</h2>
+    </section>
+
+    <section class="BestSection" id="carrouselSection">
+        <h1 class="Title">My Best Projects</h1>
+        <article class="BestSection-card">
+            <img class="BestSection-card-img" src="./img/" alt="Project 01">
+            <h2 class="BestSection-card-title">Project 01</h2>
+        </article>
+        <article class="BestSection-card">
+            <img class="BestSection-card-img" src="./img/" alt="Project 02">
+            <h2 class="BestSection-card-title">Project 02</h2>
+        </article>
+        <article class="BestSection-card">
+            <img class="BestSection-card-img" src="./img/" alt="Project 03">
+            <h2 class="BestSection-card-title">Project 03</h2>
+        </article>
+        <article class="BestSection-card">
+            <img class="BestSection-card-img" src="./img/" alt="Project 03">
+            <h2 class="BestSection-card-title">Project 04</h2>
+        </article>
+        <article class="BestSection-card">
+            <img class="BestSection-card-img" src="./img/" alt="Project 03">
+            <h2 class="BestSection-card-title">Project 05</h2>
+        </article>
+    </section>
+
+    <section class="DesignBasis">
+        <h1 class="Title">Design Basis</h1>
+        <div class="DesignBasis-card">
+            <h2 class="DesignBasis-card-title">Accessibility</h2>
+            <p class="DesignBasis-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis. Aperiam, eos rem. Totam deserunt vel, sunt officiis facilis sint ducimus dolores voluptates porro ex, labore suscipit, dolor adipisci blanditiis.</p>
+        </div>
+        <div class="DesignBasis-card">
+            <h2 class="DesignBasis-card-title">Accessible</h2>
+            <p class="DesignBasis-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis. Aperiam, eos rem. Totam deserunt vel, sunt officiis facilis sint ducimus dolores voluptates porro ex, labore suscipit, dolor adipisci blanditiis.</p>
+        </div>
+        <div class="DesignBasis-card">
+            <h2 class="DesignBasis-card-title">Accessible</h2>
+            <p class="DesignBasis-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis. Aperiam, eos rem. Totam deserunt vel, sunt officiis facilis sint ducimus dolores voluptates porro ex, labore suscipit, dolor adipisci blanditiis.</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script>
+        // Responsive Menu
+        const navTopPC = document.getElementById("navTopPC");
+        const navTopMobile = document.getElementById("NavTopMobile");
+
+        // Event when dimensions change
+        window.addEventListener("resize", () => {
+            // <768px, hidden navTopPC and add NavTopMobile
+            if (window.innerWidth < 768) {
+                navTopPC.classList.add("hidden");
+                navTopMobile.classList.remove("hidden");
+            } else {
+                // >=768px, hidden NavTopMobile and add navTopPC
+                navTopPC.classList.remove("hidden");
+                navTopMobile.classList.add("hidden");
+            }
+        });
+        // Call the event when refresh
+        window.dispatchEvent(new Event("resize"));
+
+
+
+        // NavTop block disappear when scrolling down and appear when scrolling up
+        const navTop = document.getElementById('navTopPC');
+        let prevScrollPos = window.pageYOffset;
+        
+            // Verify the dimensions
+            if (window.innerWidth > 768) {
+                let prevScrollPos = window.pageYOffset;
+
+                // Add and remove the navTopPC depending on the scroll direction
+                window.addEventListener('scroll', () => {
+                    const currentScrollPos = window.pageYOffset;
+
+                    if (prevScrollPos > currentScrollPos) {
+                        navTop.classList.remove('hidden');
+                    } else {
+                        navTop.classList.add('hidden');
+                    }
+
+                    prevScrollPos = currentScrollPos;
+                });
+            }
+
+
+        // Open Modal Menu 
+        let isNavTopModalOpen = false;
+
+        function navTopModal() {
+            const modal = document.querySelector('#NavTopModal');
+            if (isNavTopModalOpen) {
+                modal.style.display = 'none';
+                isNavTopModalOpen = false;
+            } else {
+                modal.style.display = 'block';
+                isNavTopModalOpen = true;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
 </body>
 
 </html>
