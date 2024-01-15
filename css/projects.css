@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.BoxProjects{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100vh;
+    width: 100vw;
+    gap: 1rem;
+}
+
+.BoxProjects-nav {
+    position: fixed; /* Fija la columna en la posición especificada */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+    height: 100%; /* Ocupa toda la altura disponible */
+    width: 10%; /* Establece el ancho de la columna de navegación */
+    background-color: #f0f0f0; /* Cambia el color de fondo según tu preferencia */
+    top: 0; /* Ancla la columna en la parte superior de la ventana */
+    left: 0; /* Ancla la columna en el lado izquierdo de la ventana */
+    
+}
+
+body, html {
+    scrollbar-width: thin; /* Para navegadores Firefox */
+    scrollbar-color: transparent transparent; /* Para navegadores Firefox */
+}
+
+body::-webkit-scrollbar {
+    width: 5px; /* Ajusta el ancho del scrollbar para navegadores WebKit (Chrome, Safari, Edge) */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Establece el color del thumb (barra) */
+}
+
+
+.BoxProjects-content {
+    height: 100%;
+    padding-left: 20%;
+}
+
+.BoxProjects-nav-btn{
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: var(--default-highlight-color);
+    color: var(--default-white-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
