@@ -83,11 +83,9 @@ textarea {
 /* COLOR PALETTE */
 /* Primary Palette */
 :root {
-  --default-BG-color: #e3cfed;
-  --default-titles-color: #1b423e;
-  --default-box-color: #d9b2d7;
-  --default-highlight-color: #e2866d;
-  --default-support-color: #5c6660;
+  /*--default-BG-color: #e3cfed;*/
+  --default-BG-color: #fcfcfc;
+  --default-titles-color: #112d2a;
   --default-black-color: #111111;
   --default-white-color: #EEEEEE;
 }
@@ -287,3 +285,88 @@ color: var(--default-titles-color);
 }
 
 
+
+
+
+.Projects{
+
+  margin-top: 10%;
+}
+
+.ProjectsGrid{
+  margin: 1rem;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-content: flex-start;
+}
+
+.ProjectsGrid-card {
+  position: relative;
+  height: 400px;
+  width:calc(30%-5rem);
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+  border-radius: 12px;
+  
+}
+
+.ProjectsGrid-card:hover {
+  box-shadow:1px 2px 8px 0px rgba(121, 121, 121, 0.7);
+  /* width: 35%; */
+  transition: all 1s ease;
+}
+
+.ProjectsGrid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ProjectsGrid-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(100%);
+  padding-bottom: 10%;
+}
+
+.ProjectsGrid-card:hover .ProjectsGrid-info {
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+}
+
+.ProjectsGrid-title {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ProjectsGrid-tags {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.ProjectsGrid-role {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.ProjectsGrid-type {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.ProjectsGrid-date {
+  margin: 0;
+  font-size: 14px;
+  color: #2a2a2a;
+}
