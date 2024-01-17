@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <header>
     <a class="Title Logo" href="./index.html">romina font</a>
     <!-- PC Menu -->
     <nav class="NavTop" id="navTopPC">
@@ -36,18 +37,24 @@
             </ul>
         </div>
     </nav>
+</header>
 
+
+<!--------------Hero Section: My description with animations and interactions----------------->
     <section class="HeroSection HeroSection-bg">
         <h1 class="HeroSection-text">Romina Font is a visual designer and creative currently living in Valencia. She wants to help by creating new powerful and innovative brands.
             You can find her reading poems in a lovely garden.</h1>
     </section>
 
-    <section>
-        <h2>uxui</h2>
-        <h2>design</h2>
-        <h2>illustration</h2>
+<!--------------My roles with a hover with image background----------------->
+    <section class="SectionRoles">
+        <h2 class="SectionRoles-item" id="SectionRoles-item-01">uxui</h2>
+        <h2 class="SectionRoles-item" id="SectionRoles-item-02">design</h2>
+        <h2 class="SectionRoles-item" id="SectionRoles-item-03">illustration</h2>
     </section>
 
+
+    <!--------------Selection of my best work to their pages----------------->
     <section class="BestSection" id="carrouselSection">
         <h1 class="Title">My Best Projects</h1>
         <article class="BestSection-card">
@@ -72,6 +79,58 @@
         </article>
     </section>
 
+<!--------------List of benefits----------------->
+    <section class="ListSection">
+        <h1 class="Title">Super talented at...</h1>
+        <div class="ListSection-box">
+            <div class="ListSection-item">
+                <h2 class="ListSection-subtitle">Una persona maravillosa</h2>
+                <p class="ListSection-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur et voluptate nulla sequi quos sit illum dolor magni, veniam, necessitatibus eligendi quam veritatis ratione ullam pariatur vel laudantium fugiat.</p>
+            </div>
+            <div class="ListSection-item">
+                <h2 class="ListSection-subtitle">Una persona maravillosa</h2>
+                <p class="ListSection-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur et voluptate nulla sequi quos sit illum dolor magni, veniam, necessitatibus eligendi quam veritatis ratione ullam pariatur vel laudantium fugiat.</p>
+            </div>
+            <div class="ListSection-item">
+                <h2 class="ListSection-subtitle">Una persona maravillosa</h2>
+                <p class="ListSection-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur et voluptate nulla sequi quos sit illum dolor magni, veniam, necessitatibus eligendi quam veritatis ratione ullam pariatur vel laudantium fugiat.</p>
+            </div>
+            <div class="ListSection-item">
+                <h2 class="ListSection-subtitle">Una persona maravillosa</h2>
+                <p class="ListSection-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur et voluptate nulla sequi quos sit illum dolor magni, veniam, necessitatibus eligendi quam veritatis ratione ullam pariatur vel laudantium fugiat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--------------carrousel to gallery----------------->
+    <div class="Carrousel">
+        <div class="Carrousel-item"><img class="Carrousel-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1"></div>
+        <div class="Carrousel-item"><img class="Carrousel-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 2"></div>
+        <div class="Carrousel-item"><img class="Carrousel-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 3"></div>
+        
+      </div>
+
+      <!--------------slider----------------->
+      <section class="container">
+        <div class="slider-wrapper">
+
+            <div class="slider" id="slider">
+                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1" id="slide-1">
+                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1" id="slide-2">
+                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1" id="slide-3">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1" onclick="goToSlide(1)"></a>
+                <a href="#slide-2" onclick="goToSlide(2)"></a>
+                <a href="#slide-3" onclick="goToSlide(3)"></a>
+
+            </div>
+        </div>
+      </section>
+
+
+    
+<!--------------Design basis and believes----------------->
     <section class="DesignBasis">
         <h1 class="Title">Design Basis</h1>
         <div class="DesignBasis-card">
@@ -88,6 +147,8 @@
         </div>
     </section>
 
+    <!--------------Footer with contact----------------->
+
 
 
 
@@ -97,6 +158,26 @@
 
 
         <script src="main.js"> </script>
+
+        <script>
+            let currentSlide = 1;
+          
+            function goToSlide(slideNumber) {
+              const slider = document.getElementById('slider');
+              const slideWidth = slider.clientWidth;
+              slider.scrollLeft = (slideNumber - 1) * slideWidth;
+              currentSlide = slideNumber;
+            }
+          
+            function autoSlide() {
+              currentSlide = (currentSlide % 3) + 1;
+              goToSlide(currentSlide);
+            }
+          
+            // Cambiar de slide automáticamente cada 5 segundos
+            setInterval(autoSlide, 5000);
+          </script>
+          
 </body>
 
 </html>
