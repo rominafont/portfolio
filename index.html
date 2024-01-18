@@ -79,6 +79,28 @@
         </article>
     </section>
 
+
+<!--------------galeria de prueba PENDIENTE ACABARRRRRRRRR!!!!!!----------------->
+    <section>
+        <div class="container">
+            <div class="box">
+                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
 <!--------------List of benefits----------------->
     <section class="ListSection">
         <h1 class="Title">Super talented at...</h1>
@@ -103,29 +125,22 @@
     </section>
 
     <!--------------carrousel to gallery----------------->
-    <div class="Carrousel">
-        <div class="Carrousel-item"><img class="Carrousel-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1"></div>
-        <div class="Carrousel-item"><img class="Carrousel-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 2"></div>
-        <div class="Carrousel-item"><img class="Carrousel-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 3"></div>
-        
-      </div>
+      <section class="PhotoCarrousel">
+        <div class="PhotoCarrousel-slider">
 
-      <!--------------slider----------------->
-      <section class="container">
-        <div class="slider-wrapper">
-
-            <div class="slider" id="slider">
-                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1" id="slide-1">
-                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1" id="slide-2">
-                <img src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1" id="slide-3">
+            <div class="PhotoCarrousel-slider-box" id="slider">
+                <img class="PhotoCarrousel-slider-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1" id="slider-1">
+                <img class="PhotoCarrousel-slider-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1" id="slider-2">
+                <img class="PhotoCarrousel-slider-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1" id="slider-3">
             </div>
-            <div class="slider-nav">
-                <a href="#slide-1" onclick="goToSlide(1)"></a>
-                <a href="#slide-2" onclick="goToSlide(2)"></a>
-                <a href="#slide-3" onclick="goToSlide(3)"></a>
+            <div class="PhotoCarrousel-slider-nav">
+                <a class="PhotoCarrousel-slider-a" href="#slider-1" onclick="goToSlide(1)"></a>
+                <a class="PhotoCarrousel-slider-a" href="#slider-2" onclick="goToSlide(2)"></a>
+                <a class="PhotoCarrousel-slider-a" href="#slider-3" onclick="goToSlide(3)"></a>
 
             </div>
         </div>
+        <button>Check More!</button>
       </section>
 
 
@@ -157,26 +172,8 @@
 
 
 
-        <script src="main.js"> </script>
+        <script src="./js/main.js"> </script>
 
-        <script>
-            let currentSlide = 1;
-          
-            function goToSlide(slideNumber) {
-              const slider = document.getElementById('slider');
-              const slideWidth = slider.clientWidth;
-              slider.scrollLeft = (slideNumber - 1) * slideWidth;
-              currentSlide = slideNumber;
-            }
-          
-            function autoSlide() {
-              currentSlide = (currentSlide % 3) + 1;
-              goToSlide(currentSlide);
-            }
-          
-            // Cambiar de slide automáticamente cada 5 segundos
-            setInterval(autoSlide, 5000);
-          </script>
           
 </body>
 

@@ -373,17 +373,17 @@ color: var(--default-titles-color);
 
 
 
-.container{
+.PhotoCarrousel{
   padding: 2rem;
 }
 
-.slider-wrapper{
+.PhotoCarrousel-slider{
   position: relative;
   max-width: 48rem;
   margin: 0 auto;
 }
 
-.slider{
+.PhotoCarrousel-slider-box{
   display: flex;
   aspect-ratio: 16 / 9;
   overflow-x: auto;
@@ -395,17 +395,17 @@ border-radius: 12px;
 	scrollbar-width: none; /* Hide scrollbar Firefox */
 }
 
-.slider::-webkit-scrollbar {
+.PhotoCarrousel-slider-box::-webkit-scrollbar {
 	display: none;
 }
 
-.slider img{
+.PhotoCarrousel-slider-img{
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: cover;
 }
 
-.slider-nav{
+.PhotoCarrousel-slider-nav{
   display: flex;
   column-gap: 1rem;
   position: absolute;
@@ -415,7 +415,7 @@ border-radius: 12px;
   z-index: 1;
 }
 
-.slider-nav a {
+.PhotoCarrousel-slider-a{
 width: 0.5rem;
 height: 0.5rem;
 border-radius: 50%;
@@ -424,13 +424,29 @@ opacity: 0.5;
 transition: all ease 250ms;
 }
 
-.slider-nav a:hover{
+.PhotoCarrousel-slider-a:hover{
   opacity: 1;
 }
 
 
+/*tarjetas galeria */
 
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  grid-template-rows: 250px;
+  grid-gap: 20px;
+  padding: 100px 0;
+}
 
+.box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*ACABAR AQUIIIIIIIIII*/
+}
 
 
 

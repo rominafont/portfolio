@@ -55,3 +55,22 @@ function navTopModal() {
         isNavTopModalOpen = true;
     }
 }
+
+
+// Carrousel Animado: la imagen cambia cada 5s
+let currentSlide = 1;
+          
+            function goToSlide(slideNumber) {
+              const slider = document.getElementById('slider');
+              const slideWidth = slider.clientWidth;
+              slider.scrollLeft = (slideNumber - 1) * slideWidth;
+              currentSlide = slideNumber;
+            }
+          
+            function autoSlide() {
+              currentSlide = (currentSlide % 3) + 1;
+              goToSlide(currentSlide);
+            }
+          
+            // Cambiar de slide automáticamente cada 5 segundos
+            setInterval(autoSlide, 5000);
