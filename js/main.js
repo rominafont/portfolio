@@ -1,3 +1,6 @@
+// Script desarrollado por: Romina Font
+
+
 // Responsive Menu
 const navTopPC = document.getElementById("navTopPC");
 const navTopMobile = document.getElementById("NavTopMobile");

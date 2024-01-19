@@ -1,9 +1,9 @@
+/* Estilos desarrollados por: Romina Font */
+/* Tipografias importadas*/
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
-/* Import typography*/
+
 
 /* RESET CSS STYLES */
-
-/* Reset default margin and padding */
 body,
 h1,
 h2,
@@ -28,7 +28,6 @@ td {
   padding: 0;
 }
 
-/* Reset default font styles */
 body,
 button,
 input,
@@ -39,32 +38,27 @@ textarea {
   line-height: 1.5;
 }
 
-/* Reset list styles */
 ul,
 ol {
   list-style: none;
 }
 
-/* Reset link styles */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Reset table styles */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* Reset form styles */
 fieldset,
 label {
   margin: 0;
   padding: 0;
 }
 
-/* Reset button styles */
 button,
 input[type="button"],
 input[type="submit"] {
@@ -74,13 +68,12 @@ input[type="submit"] {
   padding: 0;
 }
 
-/* Reset textarea styles */
 textarea {
   resize: none;
 }
 
 
-/* COLOR PALETTE */
+/* PALETA COLOR */
 /* Primary Palette */
 :root {
   /*--default-BG-color: #e3cfed;*/
@@ -88,6 +81,7 @@ textarea {
   --default-titles-color: #112d2a;
   --default-black-color: #111111;
   --default-white-color: #EEEEEE;
+  --default-highlight-color: #e2866d;
 }
 
 /* Dark Mode Palette */
@@ -101,30 +95,32 @@ textarea {
   --darkMode-white-color: #EEEEEE;
 }
 
-/* BASIC STYLES */
+/* Estilos basicos */
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--default-black-color);
   background-color: var(--default-BG-color);
-  margin: 0;
-  padding: 0;
+}
+
+::selection{
+  background-color: var(--default-highlight-color);
 }
 
 .Title {
   font-size: 32px;
   line-height: 40px;
   font-weight: 900;
-  margin: 1rem;
+  margin: 3rem 1rem;
   color: var(--default-titles-color);
 }
 
 .Subtitle {
-  font-size: 28px;
+  font-size: 24px;
+  padding: 10px 0;
   line-height: 36px;
   font-weight: 600;
-  margin: 1rem;
   color: var(--default-titles-color);
 }
 
@@ -134,21 +130,47 @@ body {
   color: var(--default-black-color);
 }
 
-.Logo{
+.Btn {
+  padding: 1rem;
+  border-radius: 50px;
+  border: 2px solid var(--default-titles-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), inset -1px -3px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--default-white-color);
+  font-size: 18px;
+  text-align: center;
+  color: var(--default-titles-color);
+  cursor: pointer;
+}
+
+.Btn:hover {
+  background-color: var(--default-titles-color);
+  color: var(--default-white-color);
+}
+
+.Logo {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
-  padding: 0.5em;
-  position: fixed;
+  padding: 1rem 3rem;
+  position: absolute;
+  color: var(--default-titles-color);
 }
 
-.Logo:hover{
-  color: var(--default-box-color);
+.Logo:hover {
+  color: var(--default-white-color);
   transition: all 0.3s ease-in-out;
 }
 
 
+
+
 /* NavTop PC Styles */
+.Header {
+  display: flex;
+  position: relative;
+  width: 100vw;
+}
+
 .NavTop {
   position: fixed;
   top: 1rem;
@@ -188,7 +210,7 @@ body {
 
 .NavTop-link {
   display: block;
-  padding: 0.3rem;
+  padding: 0.5rem;
   color: var(--default-titles-color);
   transition: all 0.3s ease-in-out;
 }
@@ -205,51 +227,76 @@ body {
   display: block;
 }
 
-@media (max-width: 767.98px) {
-  .NavTopPC {
-    display: none;
-  }
-}
-
-/* NavTop Mobile Styles */
-.NavTop-mobile {
-  position: fixed;
-  top: 1rem;
-  right: 2rem;
-}
-
-.NavTop-mobile-btn {
-  background-color: transparent;
-  color: var(--default-titles-color);
-  font-size: 30px;
-}
-
-.NavTop-modal{
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .NavTop-modal {
-    display: block;
-  }
-}
-
-.NavTop-modal-link{
-  font-size: 20px;
-font-weight: 600;
-color: var(--default-titles-color);
-}
-
 .hidden{
   display: none;
 }
 
+/* Estilos Footer */
+.Footer{
+  background-color: var(--default-titles-color);
+  padding: 50px auto;
+  color: var(--default-white-color);
+}
 
-/* ------------- INDEX STYLES ----------------*/
-/* HERO SECTION - INDEX */
-/* Animated BG */
+/* Ticker animado */
+.Footer-ticker {
+  height: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  align-content: center;
+}
+
+.Footer-ticker-text {
+  display: inline-block;
+  padding-left: 100%; 
+  animation: scrollText 16s linear infinite; 
+  color: #fff;
+  font-size: 200px;
+  line-height: 200px; 
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+}
+
+@keyframes scrollText {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.Footer-contact{
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem  2rem;
+  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.Footer-contact-link{
+  padding: 1rem;
+}
+
+.Footer-contact-link:hover{
+  color: var(--default-highlight-color);
+}
+
+.Copyright{
+  padding: 2rem;
+  text-align: center;
+}
+
+
+
+/* ------------- ESTILOS INDEX ----------------*/
+/* SECCION HERO - INDEX */
+/* BG Animado */
+.HeroSection{
+width: 100vw;
+}
+
 .HeroSection-bg {
-  width: 700%;
   height: 100vh;
   background: linear-gradient(36deg, #e3cfed, #e2866d, #e3cfed);
   background-position: 0 0, 0 0;
@@ -271,13 +318,8 @@ color: var(--default-titles-color);
   }
 }
 
-
-/* ---------------------------------------TESTING------------------------------------------------  */
-.HeroSection{
-  width: 100%;
-}
-.HeroSection-text{
-  font-size: calc(8px*7);
+.HeroSection-text {
+  font-size: calc(8px*6);
   padding: 3rem;
   padding-top: 10%;
   color: var(--default-titles-color);
@@ -286,126 +328,137 @@ color: var(--default-titles-color);
   width: 70vw;
 }
 
-.SectionRoles{
+
+/* SECCION ROLES - INDEX */
+.SectionRoles {
   display: flex;
   justify-content: space-around;
 }
 
-.SectionRoles-item{
+.SectionRoles-item {
   width: 30%;
   padding: 4rem;
   text-align: center;
   background-position: center;
- background-size: cover;
- transition: background-image 0.3s ease; /* Agrega una transición suave al cambiar la imagen de fondo */
-
+  background-size: cover;
 }
 
-.SectionRoles-item:nth-child(2){
+.SectionRoles-item:nth-child(2) {
   background-color: var(--default-titles-color);
   color: var(--default-white-color);
 }
 
-#SectionRoles-item-01:hover{
-  background-image:url('https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+/* Cargo el fondo independiente para cada uno de los bloques, hago servir un id porque es un elemento con una característica única */
+#SectionRoles-item-01:hover {
+  background-image: url('https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   opacity: 1;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
-#SectionRoles-item-02:hover{
-  background-image:url('https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg?auto=compress&cs=tinysrgb&w=600');
+#SectionRoles-item-02:hover {
+  background-image: url('https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg?auto=compress&cs=tinysrgb&w=600');
   opacity: 1;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
-#SectionRoles-item-03:hover{
-  background-image:url('https://images.pexels.com/photos/416682/pexels-photo-416682.jpeg?auto=compress&cs=tinysrgb&w=600');
+#SectionRoles-item-03:hover {
+  background-image: url('https://images.pexels.com/photos/416682/pexels-photo-416682.jpeg?auto=compress&cs=tinysrgb&w=600');
   opacity: 1;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 
-.ListSection{
-  margin-top:100px;
+/* SECCION GALERIA DE MEJORES PROYECTOS - INDEX */
+.BestSection-box {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+  grid-gap: 20px;
   padding: 2rem;
 }
 
-.ListSection-box{
+.BestSection-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.BestSection-card:nth-child(1) {
+  grid-column-start: span 2;
+}
+
+.BestSection-card:nth-child(4) {
+  grid-column-start: span 2;
+}
+
+
+/* SECCION BENEFICIOS - INDEX */
+.ListSection {
+  margin-top: 100px;
+  padding: 2rem;
+}
+
+.ListSection-box {
   display: flex;
   flex-wrap: wrap;
   margin: 2rem;
 }
 
-.ListSection-item{
+.ListSection-item {
   width: 45%;
   padding: 1rem;
 }
 
-.ListSection-text{
+.ListSection-text {
   font-size: 20px;
 }
 
 
-
-
-.Carrousel {
-  width: 100%;
-  overflow-x: scroll;
-  white-space: nowrap;
-  scroll-snap-type: x mandatory;
-  display: flex;
-}
-
-.Carrousel-item {
-  flex: 0 0 auto;
-  width: 25%; /* Muestra 4 columnas en pantalla */
-  min-width: 200px; /* Ancho mínimo de cada elemento */
-  box-sizing: border-box;
-  scroll-snap-align: start;
-}
-
-.Carrousel-img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-
-
-.PhotoCarrousel{
+/* SECCION CARROUSEL ANIMADO CON BOTONES DE NAVEGACION - INDEX */
+.PhotoCarrousel {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  margin: 100px auto;
 }
 
-.PhotoCarrousel-slider{
+.PhotoCarrousel-slider {
   position: relative;
   max-width: 48rem;
   margin: 0 auto;
 }
 
-.PhotoCarrousel-slider-box{
+.PhotoCarrousel-slider-box {
   display: flex;
   aspect-ratio: 16 / 9;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-scroll-behavior: smooth;
-box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0%, 0.25);
-border-radius: 12px;
--ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-	scrollbar-width: none; /* Hide scrollbar Firefox */
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0%, 0.25);
+  border-radius: 12px;
+  -ms-overflow-style: none;
+  /* Eliminar scrollbar */
+  scrollbar-width: none;
+  /* Eliminar scrollbar */
 }
 
 .PhotoCarrousel-slider-box::-webkit-scrollbar {
-	display: none;
+  display: none;
+  /* Eliminar scrollbar */
 }
 
-.PhotoCarrousel-slider-img{
+.PhotoCarrousel-slider-img {
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: cover;
 }
 
-.PhotoCarrousel-slider-nav{
+.PhotoCarrousel-slider-nav {
   display: flex;
   column-gap: 1rem;
   position: absolute;
@@ -415,40 +468,46 @@ border-radius: 12px;
   z-index: 1;
 }
 
-.PhotoCarrousel-slider-a{
-width: 0.5rem;
-height: 0.5rem;
-border-radius: 50%;
-background-color: var(--default-black-color);
-opacity: 0.5;
-transition: all ease 250ms;
+.PhotoCarrousel-slider-a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--default-black-color);
+  opacity: 0.5;
+  transition: all ease 250ms;
 }
 
-.PhotoCarrousel-slider-a:hover{
+.PhotoCarrousel-slider-a:hover {
   opacity: 1;
 }
 
 
-/*tarjetas galeria */
-
-.container{
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) ;
-  grid-template-rows: 250px;
-  grid-gap: 20px;
-  padding: 100px 0;
-}
-
-.box img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /*ACABAR AQUIIIIIIIIII*/
+.PhotoCarrousel-btn {
+  width: 150px;
 }
 
 
+/* SECCION CREENCIAS EN EL DISEÑO - INDEX */
+.DesignBasis{
+  background-color: var(--default-white-color);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  margin: 100px auto;
+}
+
+.DesignBasis-box{
+display: flex;
+gap: 2rem;
+margin: 0 3rem;
+}
+
+.DesignBasis-card{
+  width: 30%;
+}
+
+
+/* ---------------------------------------TESTING------------------------------------------------  */
 
 
 
@@ -461,13 +520,13 @@ transition: all ease 250ms;
 
 
 
-
-.Projects{
+/* ------------- ESTILOS PROYECTOS ----------------*/
+.Projects {
 
   margin-top: 10%;
 }
 
-.ProjectsGrid{
+.ProjectsGrid {
   margin: 1rem;
   margin-top: 5%;
   display: flex;
@@ -480,15 +539,15 @@ transition: all ease 250ms;
 .ProjectsGrid-card {
   position: relative;
   height: 400px;
-  width:calc(30%-5rem);
+  width: calc(30%-5rem);
   overflow: hidden;
   transition: transform 0.3s ease-out;
   border-radius: 12px;
-  
+
 }
 
 .ProjectsGrid-card:hover {
-  box-shadow:1px 2px 8px 0px rgba(121, 121, 121, 0.7);
+  box-shadow: 1px 2px 8px 0px rgba(121, 121, 121, 0.7);
   /* width: 35%; */
   transition: all 1s ease;
 }
@@ -534,6 +593,7 @@ transition: all ease 250ms;
   margin: 10px 0;
   font-size: 18px;
 }
+
 .ProjectsGrid-type {
   margin: 10px 0;
   font-size: 18px;
@@ -544,3 +604,111 @@ transition: all ease 250ms;
   font-size: 14px;
   color: #2a2a2a;
 }
+
+
+
+
+
+
+
+
+
+/*---------------------------ESTILOS VERTICALES PARA MOVIL Y TABLET VERTICAL---------------------------- */
+
+/* NavTop Mobile Styles */
+.NavTop-mobile {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+}
+
+.NavTop-mobile-btn {
+  background-color: transparent;
+  color: var(--default-titles-color);
+  font-size: 30px;
+}
+
+.NavTop-modal {
+  display: none;
+}
+
+.NavTop-modal-link {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--default-titles-color);
+}
+
+@media (min-width: 768px) {
+  .NavTop-modal {
+    display: block;
+  }
+}
+
+@media(max-width:767px) {
+
+  .Logo {
+    font-size: 18px;
+    padding: 1rem;
+  }
+
+  .Header {
+    width: 100vw;
+    justify-content: space-between;
+  }
+
+  .NavTopPC {
+    display: none;
+  }
+
+  .HeroSection-text {
+    font-size: calc(8px*4);
+    padding-top: 30%;
+  }
+
+  .SectionRoles {
+    flex-wrap: wrap;
+  }
+
+  .SectionRoles-item {
+    width: 100vw;
+  }
+
+  .ListSection-item {
+    width: 100VW;
+    padding: 0.5rem;
+  }
+
+  .PhotoCarrousel-slider {
+    width: 80vw;
+  }
+
+  .BestSection-box {
+    padding: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .BestSection-card:nth-child(1) {
+    grid-column-start: span 1;
+  }
+
+  .BestSection-card:nth-child(4) {
+    grid-column-start: span 1;
+  }
+
+  .DesignBasis{
+    flex-direction: column;
+  }
+  .DesignBasis-box{
+    flex-wrap: wrap;
+    
+  }
+
+  .DesignBasis-card{
+    width: 100%;
+    
+  }
+
+
+}
+
+
