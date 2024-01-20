@@ -53,7 +53,7 @@
 
 
         <div class="AboutGrid-box">
-            <div class="AboutGrid-card" id="AboutGrid-card-01">
+            <div class="AboutGrid-card AboutGrid-card-01" id="aboutCard01">
                 <h2 class="Subtitle">QUICK VIEW ABOUT ME</h2>
                 <p class="Text">Disciplined creative and visual designer professional who encourages creative
                     development, visual communication initiatives and the combination of design and research for
@@ -61,83 +61,142 @@
                 <p class="Text">I am currently studying a Master's in Web Design, Conceptualization (UXUI) and Digital
                     Marketing. I also work as Visual Designer for <a class="Link" target="_blank"
                         href="https://xtra-auto.com/">Grupo Xtra</a> prototyping websites.</p>
-                <div>
-                    <a title="linkedin" class="" target="_blank" href="https://www.linkedin.com/in/romina-font/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a title="Instagram" class="" target="_blank" href="https://www.instagram.com/romina.create/"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a title="Behance" class="" target="_blank" href="https://www.behance.net/rominafont"><i class="fa-brands fa-square-behance"></i></a>
-                    <a title="Mail" class="" target="_blank" href="mailto:romina.create@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                    <a title="Download CV" class="Btn" target="_blank"  href="./RominaFont_CV.pdf" download="RominaFont_CV.pdf">Download CV</a>
+                <div class="AboutGrid-card-contact">
+                    <a title="linkedin" class="" target="_blank" href="https://www.linkedin.com/in/romina-font/"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a title="Instagram" class="" target="_blank" href="https://www.instagram.com/romina.create/"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a title="Behance" class="" target="_blank" href="https://www.behance.net/rominafont"><i
+                            class="fa-brands fa-square-behance"></i></a>
+                    <a title="Mail" class="" target="_blank" href="mailto:romina.create@gmail.com"><i
+                            class="fa-solid fa-envelope"></i></a>
+                    <a title="Download CV" class="Btn" target="_blank" href="./RominaFont_CV.pdf"
+                        download="RominaFont_CV.pdf">Download CV</a>
                 </div>
             </div>
-            <div class="AboutGrid-card" id="AboutGrid-card-02">
-                <h2 class="Subtitle">me</h2>
+            <div class="AboutGrid-card AboutGrid-card-02" id="aboutCard02">
+                <h2 class="Subtitle">Hi! I am Romina!</h2>
+                <div class="AboutGrid-interaction-salute" id="salute"></div>
+                <form class="AboutGrid-interaction" id="miFormulario">
+                    <input class="AboutGrid-interaction-input" type="text" id="name" name="name"
+                        placeholder="And, what is your name?" required>
+                    <button type="button" onclick="sayHi()"><i
+                            class="fa-solid fa-paper-plane AboutGrid-interaction-btn"></i></button>
+                </form>
             </div>
-            <div class="AboutGrid-card" id="AboutGrid-card-03">
+            <div class="AboutGrid-card" id="aboutCard03">
                 <h2 class="Subtitle">EXPERIENCE</h2>
-                <ul>
-                    <li>Visual Designer <a target="_blank" href="">Grupo Xtra</a> <span>2023 - Now</span></li>
-                    <li>Marketing & Communications Manager<a target="_blank" href=""> Esencia Foods</a> <span>2023 - 2024</span></li>
-                    <li>Marketing Assistant<a target="_blank" href=""> Sol y Mar Hoteles</a> <span>2023</span></li>
-                    <li>Marketing Assistant <a target="_blank" href="">Crowne Plaza, Dublin</a> · <span>2022 - 2023</span></li>
-                    <li>Graphic Designer <a target="_blank" href="">Arcadia</a> · <span>2022 - 2023</span></li>
-                    <li>Art Director <a target="_blank" href="">Sickkalien</a> · <span>2018 - 2022</span></li>
+                <ul class="AboutGrid-card-list">
+                    <li>Visual Designer · <a class="Link" target="_blank" href="">Grupo Xtra</a> <br> <span
+                            class="AboutGrid-card-year">2023 - Now</span></li>
+                    <li>Marketing & Communications Manager ·<a class="Link" target="_blank" href=""> Esencia Foods</a>
+                        <br> <span class="AboutGrid-card-year">2023 -
+                            2024</span>
+                    </li>
+                    <li>Marketing Assistant ·<a class="Link" target="_blank" href=""> Sol y Mar Hoteles</a> <br> <span
+                            class="AboutGrid-card-year">2023</span></li>
+                    <li>Marketing Assistant · <a class="Link" target="_blank" href="">Crowne Plaza, Dublin</a> <br><span
+                            class="AboutGrid-card-year">2022 -
+                            2023</span></li>
+                    <li>Graphic Designer · <a class="Link" target="_blank" href="">Arcadia</a> <br><span
+                            class="AboutGrid-card-year">2022 - 2023</span></li>
+                    <li>Art Director · <a class="Link" target="_blank" href="">Sickkalien</a> <br><span
+                            class="AboutGrid-card-year">2018 - 2022</span></li>
                 </ul>
             </div>
-            <div class="AboutGrid-card" id="AboutGrid-card-04">
+            <div class="AboutGrid-card" id="aboutCard04">
                 <h2 class="Subtitle">EDUCATION</h2>
-                <ul>
-                    <li>Master's in Web Design, Conceptualization (UXUI) and Digital Marketing · <a target="_blank" href="">CEI Valencia</a> <span>2023 - Now</span></li>
-                    <li>Foundations of User Experience Design · <a target="_blank" href="">Google</a> <span>2022 - 2023</span></li>
-                    <li>Course of Instagram as a Profesional Tool · <a target="_blank" href="">UPV Valencia</a> <span>2021</span></li>
-                    <li>Degree in Design and Creative Technologies · <a target="_blank" href="">UPV Valencia</a> <span>2018 - 2022</span></li>
+                <ul class="AboutGrid-card-list">
+                    <li>Master's in Web Design, Conceptualization (UXUI) and Digital Marketing · <a class="Link"
+                            target="_blank" href="">CEI Valencia</a> <br> <span class="AboutGrid-card-year">2023 -
+                            Now</span></li>
+                    <li>Foundations of User Experience Design · <a class="Link" target="_blank" href=""> Google</a> <br>
+                        <span class="AboutGrid-card-year">2022 - 2023</span>
+                    </li>
+                    <li>Course of Instagram as a Profesional Tool · <a class="Link" target="_blank" href=""> Universitat
+                            Politècnica de València</a> <br> <span class="AboutGrid-card-year">2021</span></li>
+                    <li>Degree in Design and Creative Technologies · <a class="Link" target="_blank" href="">Universitat
+                            Politècnica de València</a> <br><span class="AboutGrid-card-year">2018 - 2022</span></li>
                 </ul>
             </div>
-            <div class="AboutGrid-card" id="AboutGrid-card-05">
-                <h2 class="Subtitle">SOFTWARES</h2>
+            <div class="AboutGrid-card" id="aboutCard05">
+                <h2 class="Subtitle">SKILLS</h2>
+                <div class="AboutGrid-tags">
+                    <span class="AboutGrid-tag">Advertising Design</span>
+                    <span class="AboutGrid-tag">Brand Identity</span>
+                    <span class="AboutGrid-tag">Editorial Design</span>
+                    <span class="AboutGrid-tag">Project Management</span>
+                    <span class="AboutGrid-tag">Mobile and Web Design</span>
+                    <span class="AboutGrid-tag">UX/UI Design</span>
+                    <span class="AboutGrid-tag">Campaign Creation</span>
+                    <span class="AboutGrid-tag">Product Photography</span>
+                    <span class="AboutGrid-tag">Social Media Management</span>
+                </div>
+                <h2 class="Subtitle">MY FAVOURITE TOOLS </h2>
+                <div class="AboutGrid-tools">
+                    <a target="_blank" href="https://www.figma.com/" title="Figma"><img loading="lazy"
+                            class="AboutGrid-tool" src="./img/icons/figma.webp" alt="Figma Icon"></a>
+                    <a target="_blank" href="https://www.adobe.com/es/products/illustrator.html"
+                        title="Adobe Illustrator"><img loading="lazy" class="AboutGrid-tool"
+                            src="./img/icons/illustrator.png" alt="Illustrator Icon"></a>
+                    <a target="_blank" href="https://www.adobe.com/es/products/photoshop.html"
+                        title="Adobe Photoshop"><img loading="lazy" class="AboutGrid-tool"
+                            src="./img/icons/photoshop.webp" alt="Photoshop Icon"></a>
+                    <a target="_blank" href="https://www.adobe.com/es/products/indesign.html"
+                        title="Adobe InDesign"><img loading="lazy" class="AboutGrid-tool" src="./img/icons/indesign.png"
+                            alt="InDesign Icon"></a>
+                    <a target="_blank" href="https://www.adobe.com/es/products/premiere.html"
+                        title="Adobe Premiere"><img loading="lazy" class="AboutGrid-tool" src="./img/icons/premiere.png"
+                            alt="Premiere Icon"></a>
+                    <a target="_blank" href="https://www.adobe.com/es/" title="Adobe XD"><img loading="lazy"
+                            class="AboutGrid-tool" src="./img/icons/adobexd.png" alt="XD Icon"></a>
+                    <a target="_blank" href="https://spark.meta.com/" title="Spark AR"><img loading="lazy"
+                            class="AboutGrid-tool" src="./img/icons/sparkar.png" alt="Spark AR Icon"></a>
+                    <a target="_blank" href="https://www.notion.so/" title="Notion"><img loading="lazy"
+                            class="AboutGrid-tool" src="./img/icons/notion.webp" alt="Notion Icon"></a>
+                    <a target="_blank" href="https://slack.com/intl/es-es/" title="Slack"><img loading="lazy"
+                            class="AboutGrid-tool" src="./img/icons/slack.png" alt="Slack Icon"></a>
+                    <a target="_blank" href="https://muz.li/" title="Muzli"><img loading="lazy" class="AboutGrid-tool"
+                            src="./img/icons/muzli.png" alt="Muzli Icon"></a>
+                    <a target="_blank"
+                        href="https://open.spotify.com/playlist/22IEHdwxbLKwn8lT0JaSFk?si=38c1925f226a4dda"
+                        title="Spotify"><img loading="lazy" class="AboutGrid-tool" src="./img/icons/spotify.webp"
+                            alt="Spotify Icon"></a>
+                </div>
             </div>
-            <div class="AboutGrid-card" id="AboutGrid-card-06">
-                <h2 class="Subtitle">FAV SONGS</h2>
-                <p>Early 2023' Special Kudos Award</p>
+            <div class="AboutGrid-card" id="aboutCard06">
+                <h2 class="Subtitle">MY FAV PLAYLISTS</h2>
+                <br>
+                <!-- Este codigo es beneficiado por spotify para insertar playlists en la web -->
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/22IEHdwxbLKwn8lT0JaSFk?utm_source=generator&theme=0"
+                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+
+
             </div>
-            <div class="AboutGrid-card" id="AboutGrid-card-07">
-                <h2 class="Subtitle">FORM</h2>
-                <form>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                  
+            <div class="AboutGrid-card AboutGrid-card-07" id="aboutCard07">
+                <h2 class="Subtitle">LET'S GET IN CONTACT!</h2>
+                <form class="AboutGrid-form">
+                    <label for="nombre">Name:</label>
+                    <input class="AboutGrid-form-input" type="text" id="nombre" name="nombre" placeholder="Ophelia" required>
+
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                  
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                  
-                    <button class="Btn" type="submit">Enviar Mensaje</button>
-                  </form>
+                    <input class="AboutGrid-form-input" type="email" id="email" name="email" placeholder="ophelia@dream.com" required>
+
+                    <label for="mensaje">Message:</label>
+                    <textarea class="AboutGrid-form-input" id="mensaje" name="mensaje" rows="4" placeholder="Hello, I'm interested in..." required></textarea>
+
+                    <button class="Btn AboutGrid-form-btn" type="submit">Let’s talk!</button>
+                </form>
             </div>
-            <div class="AboutGrid-card" id="AboutGrid-card-08">
+            <div class="AboutGrid-card" id="aboutCard08">
                 <h2 class="Subtitle">MAS PHOTOS</h2>
                 <p>Early 2023' Special Kudos Award</p>
             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-        <!-- ------------prueba pelota animada---------------  
-    <section class="">
-        <div class="bouncingball"></div>
-        <div class="glassmorphism">
-            <h1 class="Title">como mola</h1>
-            <p class="Text">mola mucho</p>
-        </div>
-    </section> -->
 
     </main>
     <!--------------Footer con letras animadas, contacto y copyright----------------->
@@ -164,6 +223,24 @@
 
 
     <script src="./js/main.js"> </script>
+
+
+    <script>
+        // Funcion que saluda al usuario con su nombre obtenido desde un input
+        function sayHi() {
+            //obtenemos el valor del input
+            const name = document.getElementById('name').value;
+
+            // construimos el mensaje que se va a mostrar
+            const sayHi = `Hi! ${name} nice to meet you! 🌸🫰🏼`;
+
+            // se muestra el resultado en su bloque salute con una animacion
+            const saluteDiv = document.getElementById('salute');
+            saluteDiv.innerHTML = sayHi;
+            saluteDiv.classList.add('fadeIn');
+            saluteDiv.style.display = 'block';
+        }
+    </script>
 
 
 

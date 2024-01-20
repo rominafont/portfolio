@@ -134,6 +134,10 @@ body {
   font-weight: 900;
 }
 
+.Link:hover{
+  color: var(--default-highlight-color);
+}
+
 .Btn {
   padding: 1rem;
   border-radius: 50px;
@@ -682,75 +686,160 @@ body {
   border: 1px solid rgba(226, 134, 109, 1);
 }
 
-#AboutGrid-card-01 {
-  grid-column: span 1;
+.AboutGrid-card-01 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-#AboutGrid-card-07 {
+.AboutGrid-card-contact{
+  font-size: 30px;
+  color: var(--default-highlight-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.AboutGrid-card-02{
+  background-image: url('https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg'); 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.AboutGrid-interaction{
+  background: rgba(214, 195, 190, 0.56);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  display: flex;
+  justify-content: space-between;
+  color: var(--default-white-color);
+  padding: 1rem;
+}
+
+.AboutGrid-interaction-input{
+  border: 0px;
+  padding: 0.5rem;
+  background-color: transparent;
+  color:var(--default-white-color);
+}
+
+.AboutGrid-interaction-input::placeholder {
+  color:var(--default-white-color);
+}
+
+.AboutGrid-interaction-btn{
+  color: var(--default-white-color);
+  font-size: 24px;
+}
+
+.AboutGrid-interaction-salute{
+  display: none;
+  background: rgba(214, 195, 190, 0.5);
+  border-radius: 12px;
+  border-bottom-left-radius: 0px;
+  box-shadow: 3px 3px 9px 2px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  color: var(--default-BG-color);
+  padding: 1rem;
+  position: relative;
+  animation: salute ease-in 0.7s; 
+}
+
+@keyframes salute{
+  0% {
+    transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+    transform: translateY(2%);
+      opacity: 100%;
+  }
+}
+
+.AboutGrid-card-list {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.AboutGrid-card-year{
+  font-size: 12px;
+  line-height:10px ;
+}
+
+.AboutGrid-tags{
+display: flex;
+flex-wrap: wrap;
+margin: 10px 0px 10px 0px;
+}
+
+.AboutGrid-tag{
+padding: 0.2rem 0.7rem;
+margin: 0px 10px 10px 0px;
+color: var(--default-white-color);
+background-color: var(--default-titles-color);
+font-weight: 700;
+font-size: 14px;
+border-radius: 50px;
+text-align: center;
+}
+
+.AboutGrid-tools{
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 10px 0px 10px 0px;
+}
+
+.AboutGrid-tool{
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.AboutGrid-card-07 {
   grid-column: span 2;
 }
 
+.AboutGrid-form{
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  color: var(--default-white-color);
+  gap: 1rem;
+}
 
+.AboutGrid-form-input{
+  border: 1px solid var(--default-white-color);
+  padding: 0.5rem;
+  background-color: transparent;
+  color:var(--default-white-color);
+  border-radius: 12px;
+}
 
+.AboutGrid-form-input::placeholder {
+  color:var(--default-white-color);
+}
 
-
-
-
-
-
-/* pelota animada */
-
-.bouncingball {
-  width: 140px;
-  height: 140px;
-  border-radius: 100%;
-  background: #CCC;
-  animation: bounce 1s;
-  transform: translateY(0px);
-  animation-iteration-count: infinite;
-  position: absolute;
-  margin: 50px;
+.AboutGrid-form-btn{
+  width: 40%;
 }
 
 
 
 
-@keyframes bounce {
-  0% {
-    top: 0;
-    -webkit-animation-timing-function: ease-in;
-  }
 
-  40% {}
 
-  50% {
-    top: 300px;
-    height: 140px;
-    -webkit-animation-timing-function: ease-out;
-  }
 
-  55% {
-    top: 360px;
-    height: 120px;
-    -webkit-animation-timing-function: ease-in;
-  }
-
-  65% {
-    top: 120px;
-    height: 140px;
-    -webkit-animation-timing-function: ease-out;
-  }
-
-  95% {
-    top: 0;
-    -webkit-animation-timing-function: ease-in;
-  }
-
-  100% {
-    top: 0;
-    -webkit-animation-timing-function: ease-in;
-  }
-}
 
 
 
@@ -870,4 +959,38 @@ body {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .AboutGrid-box {
+    
+    margin-top: 10%;
+    grid-template-columns: 1fr;
+  }
+
+  .AboutGrid-card {
+    padding: 1.5rem;
+  }
+
+  
+  .AboutGrid-card-contact {
+    font-size: 24px;
+  }
+
+  .AboutGrid-interaction-input,
+  .AboutGrid-form-input {
+    font-size: 18px;
+  }
+
+  .AboutGrid-interaction-btn,
+  .AboutGrid-form-btn {
+    font-size: 20px;
+  }
+
+  .AboutGrid-card-07  {
+    grid-column: span 1;
+  }
+
+  .AboutGrid-card-02  {
+    height: 400px;
+  }
+
+  
 }
