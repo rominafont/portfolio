@@ -1,50 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romina Font - Portfolio</title>
+    <title>About - Romina Font</title>
 
-    
+
     <!----------- LINKS ------------->
+    <!--Hoja de estilos CSS-->
     <link rel="stylesheet" href="/css/styles.css">
-   
+
+    <!--Fontawesome: iconos de redes sociales-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!------------------------------->
 
 </head>
+
 <body>
+    <!----------- Header principal de la web que se repite en todas las pantallas ------------->
+    <header class="Header">
+        <a class="Logo" href="./index.html">romina font</a>
+
+        <!-- Navegacion PC -->
+        <nav class="NavTop" id="navTopPC">
+            <ul class="NavTop-box">
+                <li class="NavTop-item"><a class="NavTop-link" href="./index.html">Discover</a></li>
+                <li class="NavTop-item"><a class="NavTop-link" href="./projects.html">Projects</a></li>
+                <li class="NavTop-item"><a class="NavTop-link" href="./gallery.html">Gallery</a></li>
+                <li class="NavTop-item"><a class="NavTop-link" href="./about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Navegacion en Movil y Tablet V -->
+        <nav class="NavTop-mobile" id="NavTopMobile">
+            <button class="NavTop-mobile-btn" onclick="navTopModal()">+</button>
+            <div class="NavTop-modal" id="NavTopModal">
+                <ul>
+                    <li><a class="NavTop-modal-link" href="./index.html">Discover</a></li>
+                    <li><a class="NavTop-modal-link" href="./projects.html">Projects</a></li>
+                    <li><a class="NavTop-modal-link" href="./gallery.html">Gallery</a></li>
+                    <li><a class="NavTop-modal-link" href="./about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="About Gradient-bg">
 
 
-    <!--------------Listado de mis beneficios como creativa----------------->
-    <section class="ListSection">
-        <h1 class="Title">Super talented at...</h1>
-        <div class="ListSection-box">
-            <div class="ListSection-item">
-                <h2 class="ListSection-subtitle">Una persona maravillosa</h2>
-                <p class="ListSection-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur et
-                    voluptate nulla sequi quos sit illum dolor magni, veniam, necessitatibus eligendi quam veritatis
-                    ratione ullam pariatur vel laudantium fugiat.</p>
+        <div class="AboutGrid-box">
+            <div class="AboutGrid-card" id="AboutGrid-card-01">
+                <h2 class="Subtitle">QUICK VIEW ABOUT ME</h2>
+                <p class="Text">Disciplined creative and visual designer professional who encourages creative
+                    development, visual communication initiatives and the combination of design and research for
+                    creative problem-solving.</p>
+                <p class="Text">I am currently studying a Master's in Web Design, Conceptualization (UXUI) and Digital
+                    Marketing. I also work as Visual Designer for <a class="Link" target="_blank"
+                        href="https://xtra-auto.com/">Grupo Xtra</a> prototyping websites.</p>
+                <div>
+                    <a title="linkedin" class="" target="_blank" href="https://www.linkedin.com/in/romina-font/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a title="Instagram" class="" target="_blank" href="https://www.instagram.com/romina.create/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a title="Behance" class="" target="_blank" href="https://www.behance.net/rominafont"><i class="fa-brands fa-square-behance"></i></a>
+                    <a title="Mail" class="" target="_blank" href="mailto:romina.create@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a title="Download CV" class="Btn" target="_blank"  href="./RominaFont_CV.pdf" download="RominaFont_CV.pdf">Download CV</a>
+                </div>
             </div>
-            <div class="ListSection-item">
-                <h2 class="ListSection-subtitle">Una persona maravillosa</h2>
-                <p class="ListSection-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur et
-                    voluptate nulla sequi quos sit illum dolor magni, veniam, necessitatibus eligendi quam veritatis
-                    ratione ullam pariatur vel laudantium fugiat.</p>
+            <div class="AboutGrid-card" id="AboutGrid-card-02">
+                <h2 class="Subtitle">me</h2>
             </div>
-            <div class="ListSection-item">
-                <h2 class="ListSection-subtitle">Una persona maravillosa</h2>
-                <p class="ListSection-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur et
-                    voluptate nulla sequi quos sit illum dolor magni, veniam, necessitatibus eligendi quam veritatis
-                    ratione ullam pariatur vel laudantium fugiat.</p>
+            <div class="AboutGrid-card" id="AboutGrid-card-03">
+                <h2 class="Subtitle">EXPERIENCE</h2>
+                <ul>
+                    <li>Visual Designer <a target="_blank" href="">Grupo Xtra</a> <span>2023 - Now</span></li>
+                    <li>Marketing & Communications Manager<a target="_blank" href=""> Esencia Foods</a> <span>2023 - 2024</span></li>
+                    <li>Marketing Assistant<a target="_blank" href=""> Sol y Mar Hoteles</a> <span>2023</span></li>
+                    <li>Marketing Assistant <a target="_blank" href="">Crowne Plaza, Dublin</a> · <span>2022 - 2023</span></li>
+                    <li>Graphic Designer <a target="_blank" href="">Arcadia</a> · <span>2022 - 2023</span></li>
+                    <li>Art Director <a target="_blank" href="">Sickkalien</a> · <span>2018 - 2022</span></li>
+                </ul>
             </div>
-            <div class="ListSection-item">
-                <h2 class="ListSection-subtitle">Una persona maravillosa</h2>
-                <p class="ListSection-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur et
-                    voluptate nulla sequi quos sit illum dolor magni, veniam, necessitatibus eligendi quam veritatis
-                    ratione ullam pariatur vel laudantium fugiat.</p>
+            <div class="AboutGrid-card" id="AboutGrid-card-04">
+                <h2 class="Subtitle">EDUCATION</h2>
+                <ul>
+                    <li>Master's in Web Design, Conceptualization (UXUI) and Digital Marketing · <a target="_blank" href="">CEI Valencia</a> <span>2023 - Now</span></li>
+                    <li>Foundations of User Experience Design · <a target="_blank" href="">Google</a> <span>2022 - 2023</span></li>
+                    <li>Course of Instagram as a Profesional Tool · <a target="_blank" href="">UPV Valencia</a> <span>2021</span></li>
+                    <li>Degree in Design and Creative Technologies · <a target="_blank" href="">UPV Valencia</a> <span>2018 - 2022</span></li>
+                </ul>
+            </div>
+            <div class="AboutGrid-card" id="AboutGrid-card-05">
+                <h2 class="Subtitle">SOFTWARES</h2>
+            </div>
+            <div class="AboutGrid-card" id="AboutGrid-card-06">
+                <h2 class="Subtitle">FAV SONGS</h2>
+                <p>Early 2023' Special Kudos Award</p>
+            </div>
+            <div class="AboutGrid-card" id="AboutGrid-card-07">
+                <h2 class="Subtitle">FORM</h2>
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                  
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                  
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                  
+                    <button class="Btn" type="submit">Enviar Mensaje</button>
+                  </form>
+            </div>
+            <div class="AboutGrid-card" id="AboutGrid-card-08">
+                <h2 class="Subtitle">MAS PHOTOS</h2>
+                <p>Early 2023' Special Kudos Award</p>
             </div>
         </div>
-    </section>
-    
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ------------prueba pelota animada---------------  
+    <section class="">
+        <div class="bouncingball"></div>
+        <div class="glassmorphism">
+            <h1 class="Title">como mola</h1>
+            <p class="Text">mola mucho</p>
+        </div>
+    </section> -->
+
+    </main>
+    <!--------------Footer con letras animadas, contacto y copyright----------------->
+    <footer class="Footer">
+        <div class="Footer-ticker">
+            <span class="Footer-ticker-text" id="footerTickerText">Romina Font creative & visual designer </span>
+        </div>
+
+        <div class="Footer-contact">
+            <a class="Footer-contact-link" target="_blank" href="https://www.linkedin.com/in/romina-font/">linkedin</a>
+            <a class="Footer-contact-link" target="_blank" href="https://www.instagram.com/romina.create/">instagram</a>
+            <a class="Footer-contact-link" target="_blank" href="https://www.behance.net/rominafont">behance</a>
+            <a class="Footer-contact-link" target="_blank"
+                href="mailto:romina.create@gmail.com">romina.create@gmail.com</a>
+        </div>
+
+        <div class="Copyright">
+            Romina Font 2024 - All Rights Reserved
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="./js/main.js"> </script>
+
+
+
+
+
 </body>
+
 </html>

@@ -102,9 +102,10 @@ body {
   line-height: 1.5;
   color: var(--default-black-color);
   background-color: var(--default-BG-color);
+  overflow-x: hidden;
 }
 
-::selection{
+::selection {
   background-color: var(--default-highlight-color);
 }
 
@@ -118,16 +119,19 @@ body {
 
 .Subtitle {
   font-size: 24px;
-  padding: 10px 0;
   line-height: 36px;
   font-weight: 600;
   color: var(--default-titles-color);
 }
 
 .Text {
-  margin: 0.5rem;
   font-weight: 400;
   color: var(--default-black-color);
+}
+
+.Link{
+  color: var(--default-titles-color);
+  font-weight: 900;
 }
 
 .Btn {
@@ -157,9 +161,10 @@ body {
 }
 
 .Logo:hover {
-  color: var(--default-white-color);
+  color: var(--default-highlight-color);
   transition: all 0.3s ease-in-out;
 }
+
 
 
 
@@ -169,6 +174,7 @@ body {
   display: flex;
   position: relative;
   width: 100vw;
+  z-index: 999;
 }
 
 .NavTop {
@@ -186,6 +192,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
 
 .NavTop-box {
@@ -227,12 +234,12 @@ body {
   display: block;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
 /* Estilos Footer */
-.Footer{
+.Footer {
   background-color: var(--default-titles-color);
   padding: 50px auto;
   color: var(--default-white-color);
@@ -250,11 +257,11 @@ body {
 
 .Footer-ticker-text {
   display: inline-block;
-  padding-left: 100%; 
-  animation: scrollText 16s linear infinite; 
+  padding-left: 100%;
+  animation: scrollText 16s linear infinite;
   color: #fff;
   font-size: 200px;
-  line-height: 200px; 
+  line-height: 200px;
   font-family: 'Instrument Serif', serif;
   font-style: italic;
 }
@@ -265,26 +272,34 @@ body {
   }
 }
 
-.Footer-contact{
+.Footer-contact {
   display: flex;
   justify-content: space-around;
-  margin: 3rem  2rem;
+  margin: 3rem 2rem;
   flex-wrap: wrap;
   font-size: 18px;
   font-weight: 700;
 }
 
-.Footer-contact-link{
+.Footer-contact-link {
   padding: 1rem;
 }
 
-.Footer-contact-link:hover{
+.Footer-contact-link:hover {
   color: var(--default-highlight-color);
 }
 
-.Copyright{
+.Copyright {
   padding: 2rem;
   text-align: center;
+}
+
+.Gradient-bg {
+  height: 100vh;
+  background: linear-gradient(36deg, #e3cfed, #e2866d, #e3cfed);
+  background-position: 0 0, 0 0;
+  background-size: 600% 600%, cover;
+  animation: gradient 19s ease infinite;
 }
 
 
@@ -292,16 +307,8 @@ body {
 /* ------------- ESTILOS INDEX ----------------*/
 /* SECCION HERO - INDEX */
 /* BG Animado */
-.HeroSection{
-width: 100vw;
-}
-
-.HeroSection-bg {
-  height: 100vh;
-  background: linear-gradient(36deg, #e3cfed, #e2866d, #e3cfed);
-  background-position: 0 0, 0 0;
-  background-size: 600% 600%, cover;
-  animation: gradient 19s ease infinite;
+.HeroSection {
+  width: 100vw;
 }
 
 @keyframes gradient {
@@ -395,28 +402,6 @@ width: 100vw;
 }
 
 
-/* SECCION BENEFICIOS - INDEX */
-.ListSection {
-  margin-top: 100px;
-  padding: 2rem;
-}
-
-.ListSection-box {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 2rem;
-}
-
-.ListSection-item {
-  width: 45%;
-  padding: 1rem;
-}
-
-.ListSection-text {
-  font-size: 20px;
-}
-
-
 /* SECCION CARROUSEL ANIMADO CON BOTONES DE NAVEGACION - INDEX */
 .PhotoCarrousel {
   padding: 2rem;
@@ -488,7 +473,7 @@ width: 100vw;
 
 
 /* SECCION CREENCIAS EN EL DISEÑO - INDEX */
-.DesignBasis{
+.DesignBasis {
   background-color: var(--default-white-color);
   padding: 2rem;
   display: flex;
@@ -496,14 +481,170 @@ width: 100vw;
   margin: 100px auto;
 }
 
-.DesignBasis-box{
-display: flex;
-gap: 2rem;
-margin: 0 3rem;
+.DesignBasis-box {
+  display: flex;
+  gap: 2rem;
+  margin: 0 3rem;
 }
 
-.DesignBasis-card{
+.DesignBasis-card {
   width: 30%;
+}
+
+
+/* ----------------- ESTILOS PROYECTOS ----------------*/
+.Projects {
+  height: 100%;
+  padding: 10% 0;
+}
+
+.ProjectsBox {
+  margin: 1rem;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-content: flex-start;
+}
+
+.ProjectsBox-card {
+  position: relative;
+  width: 30%;
+  height: 400px;
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+  border-radius: 12px;
+
+}
+
+.ProjectsBox-card:hover {
+  box-shadow: 0px 0px 5px 0px rgba(92, 102, 96, 0.7);
+  transform: scale(1.02);
+  transition: all 0.8s ease;
+}
+
+.ProjectsBox-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ProjectsBox-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(100%);
+  padding-bottom: 25%;
+/* ESTILOS GLASSMORPHISM (trend que hace que las cajas superpuestas parezcan cristales) */
+  background: rgba(227, 207, 237, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(227, 207, 237, 1);
+}
+
+.ProjectsBox-card:hover .ProjectsBox-info {
+  transform: translateY(0);
+  transition: all 0.5s ease-in;
+}
+
+.ProjectsBox-title {
+  margin: 0;
+  font-size: 32px;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--default-white-color);
+}
+
+.ProjectsBox-tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+  color: var(--default-black-color);
+}
+
+.ProjectsBox-info-mobile {
+  display: none;
+}
+
+
+/* ------------- ESTILOS GALERIA ----------------*/
+.Gallery {
+  height: 100%;
+  padding: 10% 0;
+}
+
+/* Eleccion fotos o ilustraciones - GALERIA */
+.ListSection-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+}
+
+.ListSection-item {
+  width: 45%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ListSection-text {
+  font-size: 20px;
+}
+
+.ListSection-btn {
+  width: 150px;
+  position: relative;
+  margin: 20px 0;  
+}
+
+/* Galeria con grid con transicion hover y al click despliega la foto fullscreen - GALERIA */
+.Gallery-box {
+  /* Grid con 3 columnas */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 1rem;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.Gallery-img {
+  width: 100%;
+  height: 300px;
+  background: var(--default-titles-color);
+  object-fit: cover;
+  
+}
+
+.Gallery-img:hover {
+  box-shadow: 0px 0px 5px 0px rgba(92, 102, 96, 0.7);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* La imagen al click se abre en fullscreen*/
+.Gallery-img.openPhoto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /*posiciona la imagen incluso por encima del header y navegación principal*/
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: rgba(227,207,237, 0.7);
+}
+
+.Gallery-img.openPhoto:hover {
+  z-index: 1000;
+  transform: none;
 }
 
 
@@ -515,99 +656,101 @@ margin: 0 3rem;
 
 
 
-
-
-
-
-
-/* ------------- ESTILOS PROYECTOS ----------------*/
-.Projects {
-
-  margin-top: 10%;
-}
-
-.ProjectsGrid {
-  margin: 1rem;
-  margin-top: 5%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-content: flex-start;
-}
-
-.ProjectsGrid-card {
-  position: relative;
-  height: 400px;
-  width: calc(30%-5rem);
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-  border-radius: 12px;
-
-}
-
-.ProjectsGrid-card:hover {
-  box-shadow: 1px 2px 8px 0px rgba(121, 121, 121, 0.7);
-  /* width: 35%; */
-  transition: all 1s ease;
-}
-
-.ProjectsGrid-img {
-  width: 100%;
+/* ------------- ESTILOS ABOUT ----------------*/
+.About {
   height: 100%;
-  object-fit: cover;
+  padding: 10% 0;
 }
 
-.ProjectsGrid-info {
+
+.AboutGrid-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem;
+}
+
+.AboutGrid-card {
+  padding: 2rem;
+  text-align: justify;
+  /* ESTILOS GLASSMORPHISM (trend que hace que las cajas superpuestas parezcan cristales) */
+  background: rgba(214, 195, 190, 0.56);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+  border: 1px solid rgba(226, 134, 109, 1);
+}
+
+#AboutGrid-card-01 {
+  grid-column: span 1;
+}
+
+#AboutGrid-card-07 {
+  grid-column: span 2;
+}
+
+
+
+
+
+
+
+
+
+/* pelota animada */
+
+.bouncingball {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background: #CCC;
+  animation: bounce 1s;
+  transform: translateY(0px);
+  animation-iteration-count: infinite;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  box-sizing: border-box;
-  transition: transform 0.5s ease-in-out;
-  transform: translateY(100%);
-  padding-bottom: 10%;
-}
-
-.ProjectsGrid-card:hover .ProjectsGrid-info {
-  transform: translateY(0);
-  transition: all 1s ease-in-out;
-}
-
-.ProjectsGrid-title {
-  margin: 0;
-  font-size: 30px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.ProjectsGrid-tags {
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-}
-
-.ProjectsGrid-role {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-.ProjectsGrid-type {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-.ProjectsGrid-date {
-  margin: 0;
-  font-size: 14px;
-  color: #2a2a2a;
+  margin: 50px;
 }
 
 
 
 
+@keyframes bounce {
+  0% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  40% {}
+
+  50% {
+    top: 300px;
+    height: 140px;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  55% {
+    top: 360px;
+    height: 120px;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  65% {
+    top: 120px;
+    height: 140px;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  95% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  100% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
 
 
 
@@ -633,7 +776,7 @@ margin: 0 3rem;
 }
 
 .NavTop-modal-link {
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 600;
   color: var(--default-titles-color);
 }
@@ -647,7 +790,7 @@ margin: 0 3rem;
 @media(max-width:767px) {
 
   .Logo {
-    font-size: 18px;
+    font-size: 30px;
     padding: 1rem;
   }
 
@@ -656,7 +799,7 @@ margin: 0 3rem;
     justify-content: space-between;
   }
 
-  .NavTopPC {
+  .NavTop {
     display: none;
   }
 
@@ -675,7 +818,6 @@ margin: 0 3rem;
 
   .ListSection-item {
     width: 100VW;
-    padding: 0.5rem;
   }
 
   .PhotoCarrousel-slider {
@@ -695,20 +837,37 @@ margin: 0 3rem;
     grid-column-start: span 1;
   }
 
-  .DesignBasis{
+  .DesignBasis {
     flex-direction: column;
   }
-  .DesignBasis-box{
+
+  .DesignBasis-box {
     flex-wrap: wrap;
-    
+
   }
 
-  .DesignBasis-card{
+  .DesignBasis-card {
     width: 100%;
-    
+
   }
 
+  .ProjectsBox-card {
+    width: 90%;
+    position: relative;
+  }
+
+  .ProjectsBox-info {
+    display: none;
+  }
+
+  .ProjectsBox-info-mobile {
+    display: block;
+    text-align: center;
+  }
+  
+
+  .Gallery-box {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 
 }
-
-

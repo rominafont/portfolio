@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romina Font - Portfolio</title>
 
+    <!-- Enlace al favicon: icono que aparece en las pestañas de los navegadores -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
 
     <!----------- LINKS ------------->
     <link rel="stylesheet" href="/css/styles.css">
@@ -26,6 +29,7 @@
         <!-- Navegacion PC -->
         <nav class="NavTop" id="navTopPC">
             <ul class="NavTop-box">
+                <li class="NavTop-item"><a class="NavTop-link" href="./index.html">Discover</a></li>
                 <li class="NavTop-item"><a class="NavTop-link" href="./projects.html">Projects</a></li>
                 <li class="NavTop-item"><a class="NavTop-link" href="./gallery.html">Gallery</a></li>
                 <li class="NavTop-item"><a class="NavTop-link" href="./about.html">About</a></li>
@@ -37,7 +41,7 @@
             <button class="NavTop-mobile-btn" onclick="navTopModal()">+</button>
             <div class="NavTop-modal" id="NavTopModal">
                 <ul>
-                    <li><a class="NavTop-modal-link" href="./index.html">Home</a></li>
+                    <li><a class="NavTop-modal-link" href="./index.html">Discover</a></li>
                     <li><a class="NavTop-modal-link" href="./projects.html">Projects</a></li>
                     <li><a class="NavTop-modal-link" href="./gallery.html">Gallery</a></li>
                     <li><a class="NavTop-modal-link" href="./about.html">About</a></li>
@@ -46,93 +50,97 @@
         </nav>
     </header>
 
+    <main class="Main">
+        <!--------------Hero Section: Descripcion con interacciones----------------->
+        <section class="HeroSection Gradient-bg">
+            <h1 class="HeroSection-text">Romina Font is a visual designer and creative currently living in Valencia. She
+                wants to help by creating new powerful and innovative brands.
+                You can find her reading poems in a lovely garden.</h1>
+        </section>
 
-    <!--------------Hero Section: Descripcion con interacciones----------------->
-    <section class="HeroSection HeroSection-bg">
-        <h1 class="HeroSection-text">Romina Font is a visual designer and creative currently living in Valencia. She
-            wants to help by creating new powerful and innovative brands.
-            You can find her reading poems in a lovely garden.</h1>
-    </section>
-
-    <!--------------Mis roles en el mundo profesional con un hover que muestra una imagen----------------->
-    <section class="SectionRoles">
-        <h2 class="SectionRoles-item" id="SectionRoles-item-01">uxui</h2>
-        <h2 class="SectionRoles-item" id="SectionRoles-item-02">design</h2>
-        <h2 class="SectionRoles-item" id="SectionRoles-item-03">illustration</h2>
-    </section>
-
-
-    <!--------------Galeria responsive con seleccion de mis mejores proyectos----------------->
-    <section class="BestSection" id="carrouselSection">
-        <h1 class="Title">My Best Projects</h1>
-        <div class="BestSection-box">
-            <article class="BestSection-card">
-                <img class="BestSection-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg"
-                    alt="">
-            </article>
-            <article class="BestSection-card">
-                <img class="BestSection-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg"
-                    alt="">
-            </article>
-            <article class="BestSection-card">
-                <img class="BestSection-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg"
-                    alt="">
-            </article>
-            <article class="BestSection-card">
-                <img class="BestSection-img" src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg"
-                    alt="">
-            </article>
-        </div>
-    </section>
+        <!--------------Mis roles en el mundo profesional con un hover que muestra una imagen----------------->
+        <section class="SectionRoles">
+            <h2 class="SectionRoles-item" id="SectionRoles-item-01">uxui</h2>
+            <h2 class="SectionRoles-item" id="SectionRoles-item-02">design</h2>
+            <h2 class="SectionRoles-item" id="SectionRoles-item-03">illustration</h2>
+        </section>
 
 
-    <!--------------Listado de creencias y minset en el mundo del diseño----------------->
-    <section class="DesignBasis">
-        <h1 class="Title">Design Basis</h1>
-        <div class="DesignBasis-box">
-        <div class="DesignBasis-card">
-            <h2 class="DesignBasis-card-title Subtitle">Diverse Design</h2>
-            <p class="DesignBasis-card-text">Design in a way that welcomes and respects people of all races, sexual orientations, and social backgrounds, steering clear of stereotypes.</p>
-        </div>
-        <div class="DesignBasis-card">
-            <h2 class="DesignBasis-card-title Subtitle">Inclusive Design</h2>
-            <p class="DesignBasis-card-text">A good website is made to be accessible to everyone, including those who use assistive technology, and ensures that everyone can easily understand the information.</p>
-        </div>
-        <div class="DesignBasis-card">
-            <h2 class="DesignBasis-card-title Subtitle">Green Design</h2>
-            <p class="DesignBasis-card-text">The internet affects the environment. To be greener, let's use less data, send fewer emails, and keep web pages light. It's better for users and the planet.</p>
-        </div>
-    </div>
-    </section>
-
-
-    <!--------------Carrousel animado y con botones en el inferior de navegacion de fotografias e ilustraciones----------------->
-    <section class="PhotoCarrousel">
-        <h1 class="Title">Quick view of my best pieces</h1>
-        <div class="PhotoCarrousel-slider">
-
-            <div class="PhotoCarrousel-slider-box" id="slider">
-                <img class="PhotoCarrousel-slider-img"
-                    src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1"
-                    id="slider-1">
-                <img class="PhotoCarrousel-slider-img"
-                    src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1"
-                    id="slider-2">
-                <img class="PhotoCarrousel-slider-img"
-                    src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1"
-                    id="slider-3">
+        <!--------------Galeria responsive con seleccion de mis mejores proyectos----------------->
+        <section class="BestSection" id="carrouselSection">
+            <h1 class="Title">My Best Projects</h1>
+            <div class="BestSection-box">
+                <article class="BestSection-card">
+                    <img loading="lazy" class="BestSection-img"
+                        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="">
+                </article>
+                <article class="BestSection-card">
+                    <img loading="lazy" class="BestSection-img"
+                        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="">
+                </article>
+                <article class="BestSection-card">
+                    <img loading="lazy" class="BestSection-img"
+                        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="">
+                </article>
+                <article class="BestSection-card">
+                    <img loading="lazy" class="BestSection-img"
+                        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="">
+                </article>
             </div>
-            <div class="PhotoCarrousel-slider-nav">
-                <a class="PhotoCarrousel-slider-a" href="#slider-1" onclick="goToSlide(1)"></a>
-                <a class="PhotoCarrousel-slider-a" href="#slider-2" onclick="goToSlide(2)"></a>
-                <a class="PhotoCarrousel-slider-a" href="#slider-3" onclick="goToSlide(3)"></a>
+        </section>
 
+
+        <!--------------Listado de creencias y minset en el mundo del diseño----------------->
+        <section class="DesignBasis">
+            <h1 class="Title">Design Basis</h1>
+            <div class="DesignBasis-box">
+                <div class="DesignBasis-card">
+                    <h2 class="DesignBasis-card-title Subtitle">Diverse Design</h2>
+                    <p class="DesignBasis-card-text">Design in a way that welcomes and respects people of all races,
+                        sexual orientations, and social backgrounds, steering clear of stereotypes.</p>
+                </div>
+                <div class="DesignBasis-card">
+                    <h2 class="DesignBasis-card-title Subtitle">Inclusive Design</h2>
+                    <p class="DesignBasis-card-text">A good website is made to be accessible to everyone, including
+                        those who use assistive technology, and ensures that everyone can easily understand the
+                        information.</p>
+                </div>
+                <div class="DesignBasis-card">
+                    <h2 class="DesignBasis-card-title Subtitle">Green Design</h2>
+                    <p class="DesignBasis-card-text">The internet affects the environment. To be greener, let's use less
+                        data, send fewer emails, and keep web pages light. It's better for users and the planet.</p>
+                </div>
             </div>
-        </div>
-        <a class="Btn PhotoCarrousel-btn" href="./gallery.html">Check More!</a>
-    </section>
+        </section>
 
 
+        <!--------------Carrousel animado y con botones en el inferior de navegacion de fotografias e ilustraciones----------------->
+        <section class="PhotoCarrousel">
+            <h1 class="Title">Quick view of my best pieces</h1>
+            <div class="PhotoCarrousel-slider">
+
+                <div class="PhotoCarrousel-slider-box" id="slider">
+                    <img loading="lazy" class="PhotoCarrousel-slider-img"
+                        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1"
+                        id="slider-1">
+                    <img loading="lazy" class="PhotoCarrousel-slider-img"
+                        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1"
+                        id="slider-2">
+                    <img loading="lazy" class="PhotoCarrousel-slider-img"
+                        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" alt="Imagen 1"
+                        id="slider-3">
+                </div>
+                <div class="PhotoCarrousel-slider-nav">
+                    <a class="PhotoCarrousel-slider-a" href="#slider-1" onclick="goToSlide(1)"></a>
+                    <a class="PhotoCarrousel-slider-a" href="#slider-2" onclick="goToSlide(2)"></a>
+                    <a class="PhotoCarrousel-slider-a" href="#slider-3" onclick="goToSlide(3)"></a>
+
+                </div>
+            </div>
+            <a class="Btn PhotoCarrousel-btn" href="./gallery.html">Check More!</a>
+        </section>
+
+    </main>
     <!--------------Footer con letras animadas, contacto y copyright----------------->
     <footer class="Footer">
         <div class="Footer-ticker">
@@ -143,12 +151,13 @@
             <a class="Footer-contact-link" target="_blank" href="https://www.linkedin.com/in/romina-font/">linkedin</a>
             <a class="Footer-contact-link" target="_blank" href="https://www.instagram.com/romina.create/">instagram</a>
             <a class="Footer-contact-link" target="_blank" href="https://www.behance.net/rominafont">behance</a>
-            <a class="Footer-contact-link" target="_blank" href="mailto:romina.create@gmail.com">romina.create@gmail.com</a>
+            <a class="Footer-contact-link" target="_blank"
+                href="mailto:romina.create@gmail.com">romina.create@gmail.com</a>
         </div>
 
         <div class="Copyright">
-            Copyright 2024 Romina Font All Rights Reserved
-          </div>
+            Romina Font 2024 - All Rights Reserved
+        </div>
 
     </footer>
 

@@ -4,83 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romina Font - Portfolio</title>
+    <title>Projects - Romina Font</title>
 
 
     <!----------- LINKS ------------->
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/projects.css">
     <!------------------------------->
 
 </head>
 
 <body>
-    <!-- <a class="Title Logo" href="./index.html">romina font</a> -->
-    <!-- PC Menu -->
-    <nav class="NavTop" id="navTopPC">
-        <ul class="NavTop-box">
-            <li class="NavTop-item"><a class="NavTop-link" href="./projects.html">Projects</a></li>
-            <li class="NavTop-item"><a class="NavTop-link" href="./gallery.html">Gallery</a></li>
-            <li class="NavTop-item"><a class="NavTop-link" href="./about.html">About</a></li>
-        </ul>
-    </nav>
+    <!----------- Header principal de la web que se repite en todas las pantallas ------------->
+    <header class="Header">
+        <a class="Logo" href="./index.html">romina font</a>
 
-    <!-- Tablet V /Mobile Menu -->
-    <nav class="NavTop-mobile" id="NavTopMobile">
-        <button class="NavTop-mobile-btn" onclick="navTopModal()">+</button>
-        <div class="NavTop-modal" id="NavTopModal">
-            <ul>
-                <li><a class="NavTop-modal-link" href="./projects.html">Projects</a></li>
-                <li><a class="NavTop-modal-link" href="./gallery.html">Gallery</a></li>
-                <li><a class="NavTop-modal-link" href="./about.html">About</a></li>
+        <!-- Navegacion PC -->
+        <nav class="NavTop" id="navTopPC">
+            <ul class="NavTop-box">
+                <li class="NavTop-item"><a class="NavTop-link" href="./index.html">Discover</a></li>
+                <li class="NavTop-item"><a class="NavTop-link" href="./projects.html">Projects</a></li>
+                <li class="NavTop-item"><a class="NavTop-link" href="./gallery.html">Gallery</a></li>
+                <li class="NavTop-item"><a class="NavTop-link" href="./about.html">About</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
 
-    <main class="Projects">
-        <h1 class="Title">View her work below:</h1>
-        <section class="ProjectsGrid">
-            <article class="ProjectsGrid-card">
-                <img alt="Project Poster 01" class="ProjectsGrid-img"
+        <!-- Navegacion en Movil y Tablet V -->
+        <nav class="NavTop-mobile" id="NavTopMobile">
+            <button class="NavTop-mobile-btn" onclick="navTopModal()">+</button>
+            <div class="NavTop-modal" id="NavTopModal">
+                <ul>
+                    <li><a class="NavTop-modal-link" href="./index.html">Discover</a></li>
+                    <li><a class="NavTop-modal-link" href="./projects.html">Projects</a></li>
+                    <li><a class="NavTop-modal-link" href="./gallery.html">Gallery</a></li>
+                    <li><a class="NavTop-modal-link" href="./about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="Projects Gradient-bg">
+        <h1 class="Title">Selected Work & Case Studies</h1>
+        <section class="ProjectsBox">
+            <article class="ProjectsBox-card">
+                <img alt="Project Poster 01" class="ProjectsBox-img"
                     src="https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D">
-                <div class="ProjectsGrid-info">
-                    <h2 class="ProjectsGrid-title">Yasta</h2>
-                    <div class="ProjectsGrid-tags">
-                        <p class="ProjectsGrid-role">Product Designer</p>
-                        <p class="ProjectsGrid-type">Web</p>
-                        <p class="ProjectsGrid-date">2023</p>
+                <!-- Al hover se muestra la info en PC-->
+                <div class="ProjectsBox-info">
+                    <h2 class="ProjectsBox-title Title">Yasta</h2>
+                    <div class="ProjectsBox-tags Text">
+                        <p class="ProjectsBox-role">Product Designer</p>
+                        <p class="ProjectsBox-type">Web</p>
+                        <p class="ProjectsBox-date">2023</p>
                     </div>
                 </div>
+                
+                <h3 class="MobileDetails Title">Yasta</h3>
             </article>
-            <article class="ProjectsGrid-card">
-                <img alt="Project Poster 01" class="ProjectsGrid-img"
+
+            <article class="ProjectsBox-card">
+                <img alt="Project Poster 01" class="ProjectsBox-img"
                     src="https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D">
-                <div class="ProjectsGrid-info">
-                    <h2 class="ProjectsGrid-title">Yasta</h2>
-                    <div class="ProjectsGrid-tags">
-                        <p class="ProjectsGrid-role">Product Designer</p>
-                        <p class="ProjectsGrid-type">Web</p>
-                        <p class="ProjectsGrid-date">2023</p>
+                <!-- Al hover se muestra la info en PC-->
+                <div class="ProjectsBox-info">
+                    <h2 class="ProjectsBox-title Title">Yasta</h2>
+                    <div class="ProjectsBox-tags Text">
+                        <p class="ProjectsBox-role">Product Designer</p>
+                        <p class="ProjectsBox-type">Web</p>
+                        <p class="ProjectsBox-date">2023</p>
                     </div>
                 </div>
+                
+                <h3 class="MobileDetails Title">Yasta</h3>
             </article>
-            <article class="ProjectsGrid-card">
-                <img alt="Project Poster 01" class="ProjectsGrid-img"
+
+            <article class="ProjectsBox-card">
+                <img alt="Project Poster 01" class="ProjectsBox-img"
                     src="https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D">
-                <div class="ProjectsGrid-info">
-                    <h2 class="ProjectsGrid-title">Yasta</h2>
-                    <div class="ProjectsGrid-tags">
-                        <p class="ProjectsGrid-role">Product Designer</p>
-                        <p class="ProjectsGrid-type">Web</p>
-                        <p class="ProjectsGrid-date">2023</p>
+                <div class="ProjectsBox-info">
+                    <h2 class="ProjectsBox-title Title">Caffeine & Daydreaming</h2>
+                    <div class="ProjectsBox-tags Text">
+                        <p class="ProjectsBox-role">Product Designer</p>
+                        <p class="ProjectsBox-type">Web</p>
+                        <p class="ProjectsBox-date">2023</p>
                     </div>
                 </div>
+                <h3 class="ProjectsBox-info-mobile Title">Yasta</h3>
             </article>
+
+
         </section>
     </main>
 
+    <!--------------Footer con letras animadas, contacto y copyright----------------->
+    <footer class="Footer">
+        <div class="Footer-ticker">
+            <span class="Footer-ticker-text" id="footerTickerText">Romina Font creative & visual designer </span>
+        </div>
 
-    <script src="main.js"> </script>
+        <div class="Footer-contact">
+            <a class="Footer-contact-link" target="_blank" href="https://www.linkedin.com/in/romina-font/">linkedin</a>
+            <a class="Footer-contact-link" target="_blank" href="https://www.instagram.com/romina.create/">instagram</a>
+            <a class="Footer-contact-link" target="_blank" href="https://www.behance.net/rominafont">behance</a>
+            <a class="Footer-contact-link" target="_blank"
+                href="mailto:romina.create@gmail.com">romina.create@gmail.com</a>
+        </div>
+
+        <div class="Copyright">
+            Romina Font 2024 - All Rights Reserved
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="./js/main.js"> </script>
 </body>
 
 </html>
