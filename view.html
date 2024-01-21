@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- 
+  Desarrollado por: Romina Font
+  Derechos de autor © 2024
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Project - Romina Font</title>
+
+    <!-- Enlace al favicon: icono que aparece en las pestañas de los navegadores -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!----------- LINKS ------------->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!------------------------------->
+
+</head>
+
+<body>
+    <!----------- Header principal de la web que se repite en todas las pantallas ------------->
+    <header class="Header">
+        <a class="Logo" href="./index.html">romina font</a>
+
+        <!-- Navegacion PC -->
+        <nav class="NavTop" id="navTopPC">
+            <ul class="NavTop-box">
+                <li class="NavTop-item"><a class="NavTop-link" href="./index.html">Discover</a></li>
+                <li class="NavTop-item"><a class="NavTop-link" href="./projects.html">Projects</a></li>
+                <li class="NavTop-item"><a class="NavTop-link" href="./gallery.html">Gallery</a></li>
+                <li class="NavTop-item"><a class="NavTop-link" href="./about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Navegacion en Movil y Tablet V -->
+        <nav class="NavTop-mobile" id="NavTopMobile">
+            <button class="NavTop-mobile-btn" onclick="navTopModal()">+</button>
+            <div class="NavTop-modal" id="NavTopModal">
+                <ul>
+                    <li><a class="NavTop-modal-link" href="./index.html">Discover</a></li>
+                    <li><a class="NavTop-modal-link" href="./projects.html">Projects</a></li>
+                    <li><a class="NavTop-modal-link" href="./gallery.html">Gallery</a></li>
+                    <li><a class="NavTop-modal-link" href="./about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+ <!-- Aqui carga el proyecto segun el id -->
+    <main class="ViewContainer" id="projectDetails">
+        <!-- <img class="ViewContainer-header" src="./img/illustrations/Biodiversity_RominaFont.png" alt="Photo">
+        <h1 class="ViewContainer-title Title">Esencia Foods</h1>
+        <div class="ViewContainer-data">
+            <div class="ViewContainer-tags">
+                <p class="ViewContainer-date Subtitle">July 2023</p>
+                <p class="ViewContainer-role Subtitle">Creative direction and design.</p>
+                <p class="ViewContainer-type Subtitle">Brand Identity - Packaging Design</p>
+            </div>
+            <p class="ViewContainer-text Text"> I am delighted to have created such a colourful and fun visual identity! Esencia Foods is a mycelium-based vegetable fish start-up based in Berlin and Barcelona. In this company, my role is Marketing and Communications Manager. Since I joined the company, I have been in charge of creating and renewing the brand completely and adapting it to the needs of the market. This company creates vegan fish from mycelium using biotechnology. And through this design, we structured every attribute and stage in the team. Some illustrations are the laboratory, the Mediterranean, good food and SHARKS! Esencia Foods wants to create a healthy, sustainable, vegan product that will be an excellent alternative to leave the fish 4 the fish. </p>
+        </div>
+        <img src="./img/illustrations/Biodiversity_RominaFont.png" alt="Photo" class="ViewContainer-img">
+        <div class="ViewContainer-url"><a class="Btn" href="http://" target="_blank" rel="noopener noreferrer">View Site</a></div> -->
+        
+    </main>
+
+
+    <!--------------Footer con letras animadas, contacto y copyright----------------->
+    <footer class="Footer">
+        <div class="Footer-ticker">
+            <span class="Footer-ticker-text" id="footerTickerText">Romina Font creative & visual designer </span>
+        </div>
+
+        <div class="Footer-contact">
+            <a class="Footer-contact-link" target="_blank" href="https://www.linkedin.com/in/romina-font/">linkedin</a>
+            <a class="Footer-contact-link" target="_blank" href="https://www.instagram.com/romina.create/">instagram</a>
+            <a class="Footer-contact-link" target="_blank" href="https://www.behance.net/rominafont">behance</a>
+            <a class="Footer-contact-link" target="_blank"
+                href="mailto:romina.create@gmail.com">romina.create@gmail.com</a>
+        </div>
+
+        <div class="Copyright">
+            © 2024 - Romina Font
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="./js/main.js"> </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const projectDetailsContainer = document.getElementById("projectDetails");
+
+  // se obtiene la ID del proyecto de la URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const miId = urlParams.get("id");
+
+  console.log("parametros:", urlParams);
+
+  // fetch para obtener los detalles del proyecto según el ID
+  fetch("./database/projects.json")
+    .then((response) => response.json())
+    .then((projects) => {
+      // busca el proyecto con la ID seleccionada
+      const projectChoose = projects.find((project) => project.id == Number(miId));
+
+      if (projectChoose) {
+        // estructura html de la pagina para mostrar los datos del fetch
+        projectDetailsContainer.innerHTML = `
+          <img class="ViewContainer-header" src="${projectChoose.img}" alt="Photo">
+          <h1 class="ViewContainer-title Title">${projectChoose.name}</h1>
+          <div class="ViewContainer-data">
+              <div class="ViewContainer-tags">
+                  <p class="ViewContainer-date Subtitle">${projectChoose.date}</p>
+                  <p class="ViewContainer-role Subtitle">${projectChoose.role}</p>
+                  <p class="ViewContainer-type Subtitle">${projectChoose.type}</p>
+              </div>
+              <p class="ViewContainer-text Text">${projectChoose.descp}</p>
+          </div>
+          <img src="${projectChoose.img}" alt="Photo" class="ViewContainer-img">
+          <div class="ViewContainer-url"><a class="Btn" href="${projectChoose.url}" target="_blank" rel="noopener noreferrer">View Site</a></div>
+        `;
+      } else {
+        projectDetailsContainer.innerHTML = `<p class="Title">Proyecto no encontrado</p>`;
+      }
+    })
+    .catch((error) => console.error("Error fetching project information:", error));
+});
+
+
+    </script>
+
+
+
+</body>
+
+</html>

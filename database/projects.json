@@ -3,158 +3,146 @@
         "id": 1,
         "name": "Esencia Foods",
         "img": [
-            "https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D"
+            "../img/projects/1_EsenciaFoods_RominaFont.png"
         ],
         "descp": "I am delighted to have created such a colourful and fun visual identity! Esencia Foods is a mycelium-based vegetable fish start-up based in Berlin and Barcelona. In this company, my role is Marketing and Communications Manager. Since I joined the company, I have been in charge of creating and renewing the brand completely and adapting it to the needs of the market. This company creates vegan fish from mycelium using biotechnology. And through this design, we structured every attribute and stage in the team. Some illustrations are the laboratory, the Mediterranean, good food and SHARKS! Esencia Foods wants to create a healthy, sustainable, vegan product that will be an excellent alternative to leave the fish 4 the fish.",
         "role": "Creative director & Designer",
-        "cat": ["Brand Identity","Packaging Design","Stationary Design","Social Media"],
+        "type": "Brand Identity - Social Media - Packaging",
         "slogan": "Feed the shark in you.",
-        "URL": "https://www.esenciafoods.co/",
+        "url": "https://www.esenciafoods.co/",
         "team": "",
-        "date": "july 2023"
+        "date": "July 2023"
     },
     {
         "id": 2,
         "name": "Qué Cuadro",
         "img": [
-            "https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D"
+            "../img/projects/2_QueCuadro_RominaFont.png"
         ],
         "descp": "Qué Cuadro is a fictitious campaign made during the last course of Design and Creative Technologies for the subject of Interactive Communication Projects. This campaign aims to attract teenagers to museums during the month of June. For the campaign we had to create a mobile app, a website, a game, AR content and more.I am honoured to say that in this project we got honours for best campaign, best app, best website, best AR development.My role during this project was to create the user experience in the app, create the wireframes and design the interface. Also, to develop the website in WordPress. And finally, creating the social media content and an AR filter for Instagram.I loved doing this project with my team because we had a great time and the result was magnificent. It was also our last project together as students <3.",
         "role": "Visual Designer (UXUI) & Content Creator",
-        "cat": [
-            "Prototype app in Figma",
-            "Website Design",
-            "Develop AR filter",
-            "Social Media"
-        ],
+        "type": "Prototype App - Website Design - Unity Game",
         "slogan": "The Mirones have arrived in the city and must be captured!",
-        "URL": "https://www.instagram.com/quecuadro.es/",
+        "url": "https://www.instagram.com/quecuadro.es/",
         "team": "Thara del Amo, Ramón López, Bea Rodríguez",
-        "date": "may 2022"
+        "date": "May 2022"
     },{
         "id": 3,
         "name": "Caffeine & Daydreaming",
         "img": [
-            "https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D"
+            "../img/projects/1_Caffeine_RominaFont.png"
         ],
         "descp": "Caffeine & Daydreaming, leyendo con un buen café, is a fictitious project for a bookshop café in Barcelona. I really enjoyed this project designing from the logo to the icons for the different brand supports, generating a brand identity of its own. Designing for pleasure and desire fills me with energy.",
         "role": "Creative director & Designer",
-        "cat": [
-            "Brand Identity",
-            "Packaging Design",
-            "Stationary Design"
-        ],
+        "type": "Brand Identity - Packaging Design",
         "slogan": "The personality of the brand is sweet, soft and cosy in a way that is in sync with nature.",
-        "URL": "https://www.behance.net/gallery/139112395/Caffeine-Daydreaming-Branding?log_shim_removal=1",
+        "url": "https://www.behance.net/gallery/139112395/Caffeine-Daydreaming-Branding?log_shim_removal=1",
         "team": "",
-        "date": "march 2022"
+        "date": "March 2022"
     },{
         "id": 4,
         "name": "Somia",
         "img": [
-            "https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D"
+            "../img/projects/2_Somia_RominaFont.png"
         ],
         "descp": "Somia is my final degree project at university. The project which completed Design and Creative Technologies at the Polytechnic University of Valencia. In this project, I had to develop a product from start to end where all the potential of the student could be used and in what he/she wanted to specialise. My project was Somia, a kit to manage emotions through the writing process. The kit contained 5 different tools that helped different areas of the person. Firstly, there was a 7 day challenge to start this new path. Secondly, a diary to develop productivity, habits and gratitude. Then there was a notebook with questions for each emotion or moment the person is going through, to create the habit of journaling. The kit also contained a trifold which was a list of activities to take care of yourself. And finally, motivational playlists for every moment of the day. It is, to date, the most important project for me and the one that cost me the most time and effort. I spent from January to June 2022 developing and improving it. In it, I worked on design but also on my other passions of self-knowledge and personal development. This is the final version of which I am deeply proud.",
         "role": "Creative director & Designer",
-        "cat": [
-            "Brand Identity",
-            "Product Design",
-            "Editorial Design",
-            "Stationary Design",
-            "Photography"
-        ],
+        "type": "Brand Identity - Product Design - Editorial Design",
         "slogan": "Exercises to implement your deepest self and cultivate your self-love. Rise to the clouds.",
-        "URL": "",
+        "url": "",
         "team": "",
-        "date": "june 2022"
+        "date": "June 2022"
     },{
         "id": 5,
         "name": "Flechazo",
         "img": [
-            "https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D"
+            "../img/projects/2_Flechazo_RominaFont.png"
         ],
         "descp": "Flechazo is a collection inspired by the love that people have for each other, either for other people or for themselves. This collection contains a pack of 20 coupons for romantic dates (to make alone or with someone else) and 2 models of bags printed using the serigraphic technique. Super lovely and inspiring phrases bring a little bit of magic and love to our streets. Flechazo is a personal artistic project.",
         "role": "Creative director & Illustrator",
-        "cat": [
-            "Brand Identity",
-            "Stationary Design",
-            "Social Media",
-            "Product Design",
-            "Screen Printing Production",
-            "Illustration"
-        ],
+        "type": "Brand Identity - Product Design - Screen Printing Production",
         "slogan": "Lovely and affectionate phrases to bring more love to our streets.",
-        "URL": "https://www.behance.net/gallery/138135425/Flechazo-Branding",
+        "url": "https://www.behance.net/gallery/138135425/Flechazo-Branding",
         "team": "",
-        "date": "february 2022"
+        "date": "February 2022"
     },{
         "id": 6,
         "name": "Ideagarden's Guides",
         "img": [
-            "https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D"
+            "../img/projects/1_Ideagarden_RominaFont.png"
         ],
         "descp": "Ideagarden has been a family-run gardening company since 1992. They contacted me to create guides that would teach customers more about plants. The guides would be monthly magazines, which would be displayed in the shop or could be downloaded by joining the shop's newsletter. Firstly, I designed 3 guides, one for indoor plants, one for tropical plants and another for aromatic plants. This project was realised in November 2021 and now the company has contacted me again to take their social media to the next level.",
         "role": "Creative director & Designer",
-        "cat": [
-            "Editorial Design",
-            "Stationary Design"
-        ],
+        "type": "Editorial Design",
         "slogan": "Plant guides for everyone to have a piece of nature with them at home.",
-        "URL": "",
+        "url": "",
         "team": "",
-        "date": "november 2021"
+        "date": "November 2021"
     },{
         "id": 7,
         "name": "Eneti",
         "img": [
-            "https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D"
+            "../img/projects/1_Eneti_RominaFont.png"
         ],
         "descp": "Winner of the competition organised by ENETI, a congress for Translation and Interpreting. The aim of this competition was to design a logo for the association that reflected its values and objectives. An imagotype was designed based on three concepts: communication between a sender and a receiver, the communication between a transmitter and a receiver, the conversion of and the typical headphones of an interpreter. Orange communicates energy, balance, friendship, courage, ambition and understanding, while purple brings elegance. Together they form a fun, yet severe range, perfect for a student association.",
         "role": "Creative director & Designer",
-        "cat": [
-            "Brand Identity",
-            "Logo Design"
-        ],
+        "type": "Brand Identity - Logo Design",
         "slogan": "Branding with energy and power is perfect for a student conference.",
-        "URL": "https://www.behance.net/gallery/138210587/ENETI-Logotipo",
+        "url": "https://www.behance.net/gallery/138210587/ENETI-Logotipo",
         "team": "",
-        "date": "november 2021"
+        "date": "November 2021"
     },{
         "id": 8,
         "name": "Merendola Podcast",
         "img": [
-            "https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D"
+            "../img/projects/2_Merendola_RominaFont.png"
         ],
         "descp": "Merendola Podcast, as the name implies, is a lifestyle podcast created by Romina Font and Bea Rodríguez. They talk about various topics and interview young people about even more random facts. The podcast aims to be entertaining and enjoyable for the viewer and is transmitted with an ironic tone. For the naming, we were looking for something simple and memorable as well as funny. And since the podcast is published on Fridays at snack time, the name came about by itself, Merendola, which in Spanish means afternoon snack time.",
         "role": "Creative director & Photographer",
-        "cat": [
-            "Brand Identity",
-            "Logo Design",
-            "Photography Product",
-            "Social Media"
-        ],
+        "type": "Brand Identity - Logo Design - Photography Product",
         "slogan": "Merendola a podcast by Romina Font and Bea Rodríguez.",
-        "URL": "https://www.behance.net/gallery/136936645/Merendola-Podcast-Branding",
+        "url": "https://www.behance.net/gallery/136936645/Merendola-Podcast-Branding",
         "team": "Bea Rodríguez",
-        "date": "november 2021"
+        "date": "March 2021"
     },{
         "id": 9,
         "name": "Plant Mom",
         "img": [
-            "https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D"
+            "../img/projects/2_PlantMom_RominaFont.png"
         ],
         "descp": "Plant Mom is a jewellery project created using the epoxy resin technique. This technique is based on preserving flowers in resin and making them last forever. Each piece of the brand is unique and unrepeatable. The brand's personality is sweet, elegant and seeks to be in harmony with nature.",
         "role": "Creative director & Photographer",
-        "cat": [
-            "Brand Identity",
-            "Resin Production",
-            "Photography Product",
-            "Social Media"
-        ],
+        "type": "Brand Identity - Product Design - Resin Production",
         "slogan": "Natural crystallised flowers so we can always keep a little bit of spring with us.",
-        "URL": "https://www.behance.net/gallery/138068207/Plant-Mom-Branding",
-        "team": "Bea Rodríguez",
-        "date": "may 2021"
+        "url": "https://www.behance.net/gallery/138068207/Plant-Mom-Branding",
+        "team": "",
+        "date": "May 2021"
+    },{
+        "id": 10,
+        "name": "Elévate a las Nubes",
+        "img": [
+            "../img/projects/1_ElevateALasNubes_RominaFont.png"
+        ],
+        "descp": "Elévate a las Nubes an inspiring podcast that invites you to discover yourself, believe in your dreams, and become a better version each day. Available on Spotify, each episode is a journey of self-discovery, offering motivational stories and reflections that promote empowerment and resilience.",
+        "role": "Creative director",
+        "type": "Brand Identity - Product Design",
+        "slogan": "",
+        "url": "https://open.spotify.com/show/476xRdCH50GFYlGeakv88j?si=384380210acd4653",
+        "team": "",
+        "date": "December 2023"
+    },{
+        "id": 11,
+        "name": "Moon Calendars",
+        "img": [
+            "../img/projects/1_MoonCalendar_RominaFont.png"
+        ],
+        "descp": "Line of Moon Calendars made for 2022. A combination of magic and cosmic space.",
+        "role": "Creative director & Designer",
+        "type": "Brand Identity - Product Design",
+        "slogan": "",
+        "url": "https://www.behance.net/gallery/132976293/Calendario-Lunar-2022-freebie",
+        "team": "",
+        "date": "December 2021"
     }
 
 ]

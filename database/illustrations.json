@@ -1,4 +1,62 @@
 [
-    {"id": 1, "url": "https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg", "alt text": "Descripción de la imagen 1", "caption": "Descripción de la imagen 1"},
-    {"id": 2, "url": "https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg", "alt text": "Descripción de la imagen 2", "caption": "Descripción de la imagen 1"}
-  ]
+  {
+      "url": "../img/illustrations/Biodiversity_RominaFont.png",
+      "title": "Biodiversity"
+  },
+  {
+      "url": "../img/illustrations/Comic_RominaFont.png",
+      "title": "Comic Fusión del Nucleo"
+  },
+  {
+      "url": "../img/illustrations/CovidTime_RominaFont.png",
+      "title": "Covid Time"
+  },
+  {
+      "url": "../img/illustrations/Eve_RominaFont.png",
+      "title": "Eve Vogue"
+  },
+  {
+      "url": "../img/illustrations/8M_RominaFont.png",
+      "title": "8th of March"
+  },
+  {
+      "url": "../img/illustrations/Energy_RominaFont.png",
+      "title": "Energy"
+  },
+  {
+      "url": "../img/illustrations/FridaAlien_RominaFont.png",
+      "title": "Frida Alien"
+  },
+  {
+      "url": "../img/illustrations/LilithAndEve_RominaFont.png",
+      "title": "Lilith And Eve"
+  },
+  {
+      "url": "../img/illustrations/Feminism_RominaFont.png",
+      "title": "Somos el grito de las que ya no están"
+  },
+  {
+      "url": "../img/illustrations/SoftHeart_RominaFont.png",
+      "title": "Soft Heart"
+  },
+  {
+      "url": "../img/illustrations/Protect_RominaFont.png",
+      "title": "Protect"
+  },
+  {
+      "url": "../img/illustrations/XmasPoscard_RominaFont.png",
+      "title": "Xmas Poscard"
+  },
+  {
+      "url": "../img/illustrations/Lilith_RominaFont.png",
+      "title": "Lilith"
+  },
+  {
+      "url": "../img/illustrations/Veneno_RominaFont.png",
+      "title": "La Veneno"
+  },
+  {
+      "url": "../img/illustrations/TakeABreak_RominaFont.png",
+      "title": "Take A Break"
+  }
+]

@@ -47,7 +47,8 @@
 
     <!-- ------------Descripcion de Fotografias e Ilustraciones con botones que te llevan a una seccion u otra--------------->
     <section class="ListSection">
-      <h1 class="Title">My 2 obsesions</h1>
+      <h1 class="Title">My background in the creative world as a digital artist:</h1>
+
       <div class="ListSection-box">
         <div class="ListSection-item">
           <h2 class="ListSection-subtitle">Photography</h2>
@@ -64,31 +65,15 @@
       </div>
     </section>
 
+    <br>
+    <h1 class="Title" id="photography">Beyond the Frame</h1>
+    <!-- Mediante un fetch cargamos las imagenes en cada una de las galerias -->
+    <section class="Gallery-box" id="galleryPhotographs"></section>
 
-    <h1 class="Title" id="photography">Best Photographs</h1>
-    <section class="Gallery-box">
-      <img loading="lazy" class="Gallery-img"
-        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" title="TITLE 1">
-      <img loading="lazy" class="Gallery-img"
-        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" title="TITLE 2">
-      <img loading="lazy" class="Gallery-img"
-        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" title="TITLE 3">
-      <img loading="lazy" class="Gallery-img"
-        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" title="TITLE 4">
-    </section>
+    <br>
+    <h1 class="Title" id="illustration">The Art of Storytelling</h1>
+    <section class="Gallery-box" id="galleryIllustrations"></section>
 
-
-    <h1 class="Title" id="illustration">Best Illustrations</h1>
-    <section class="Gallery-box">
-      <img loading="lazy" class="Gallery-img"
-        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" title="TITLE 1">
-      <img loading="lazy" class="Gallery-img"
-        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" title="TITLE 2">
-      <img loading="lazy" class="Gallery-img"
-        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" title="TITLE 3">
-      <img loading="lazy" class="Gallery-img"
-        src="https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg" title="TITLE 4">
-    </section>
 
   </main>
 
@@ -107,7 +92,7 @@
     </div>
 
     <div class="Copyright">
-      Romina Font 2024 - All Rights Reserved
+      © 2024 - Romina Font
     </div>
 
   </footer>
@@ -119,12 +104,6 @@
 
 
   <script>
-    /* La imagen al click se abre en fullscreen*/
-    window.onload = () => {
-      for (let i of document.querySelectorAll(".Gallery-img")) {
-        i.onclick = () => i.classList.toggle("openPhoto");
-      }
-    };
 
 
     /* Al click de ancla del banner 1 el scroll es smooth*/
@@ -150,6 +129,90 @@
         }
       });
     });
+
+
+    // /* La imagen al click se abre en fullscreen (funciona con imagenes cargadas en el HTML no con fetch)*/
+    // window.onload = () => {
+    //   for (let i of document.querySelectorAll(".Gallery-img")) {
+    //     i.onclick = () => i.classList.toggle("openPhoto");
+    //   }
+    // };
+
+
+    // Traemos las fotografias desde el JSON
+    document.addEventListener("DOMContentLoaded", function () {
+      // selecciona el contenedor de galeria al que me dirijo
+      const galleryBox = document.getElementById("galleryPhotographs");
+
+      // URL del archivo JSON con las URLs de las imágenes
+      const jsonUrl = "./database/photographs.json";
+
+      // Realiza la solicitud Fetch para obtener el JSON
+      fetch(jsonUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          data.forEach((imageData) => {
+            // Crea un elemento de imagen
+            const img = document.createElement("img");
+            img.classList.add("Gallery-img");
+            img.loading = "lazy"; // carga lento para mayor rendimiento
+            img.src = imageData.url; // el url a la carpeta donde esta la imagen
+            img.title = imageData.title; // el titulo de la foto
+
+            // Agrega las imagenes al contenedor de la galería
+            galleryBox.appendChild(img);
+          });
+
+          // Código para abrir la imagen en full screen
+          galleryBox.addEventListener("click", function (event) {
+            // Verifica si el elemento clicado es una imagen con la clase 'Gallery-img'
+            if (event.target.classList.contains("Gallery-img")) {
+              // Alterna la clase 'openPhoto' en la imagen clicada
+              event.target.classList.toggle("openPhoto");
+            }
+          });
+        })
+        .catch((error) => console.error("Error fetching images:", error));
+    });
+
+
+    // Traemos las ilustraciones desde el JSON
+    document.addEventListener("DOMContentLoaded", function () {
+      // selecciona el contenedor de galeria al que me dirijo
+      const galleryBox = document.getElementById("galleryIllustrations");
+
+      // URL del archivo JSON con las URLs de las imágenes
+      const jsonUrl = "./database/illustrations.json";
+
+      // Realiza la solicitud Fetch para obtener el JSON
+      fetch(jsonUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          data.forEach((imageData) => {
+            // Crea un elemento de imagen
+            const img = document.createElement("img");
+            img.classList.add("Gallery-img");
+            img.loading = "lazy"; // carga lento para mayor rendimiento
+            img.src = imageData.url; // el url a la carpeta donde esta la imagen
+            img.title = imageData.title; // el titulo de la foto
+
+            // Agrega las imagenes al contenedor de la galería
+            galleryBox.appendChild(img);
+          });
+
+          // Código para abrir la imagen en full screen
+          galleryBox.addEventListener("click", function (event) {
+            // Verifica si el elemento clicado es una imagen con la clase 'Gallery-img'
+            if (event.target.classList.contains("Gallery-img")) {
+              // Alterna la clase 'openPhoto' en la imagen clicada
+              event.target.classList.toggle("openPhoto");
+            }
+          });
+        })
+        .catch((error) => console.error("Error fetching images:", error));
+    });
+
+
 
 
 

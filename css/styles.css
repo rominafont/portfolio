@@ -113,7 +113,7 @@ body {
   font-size: 32px;
   line-height: 40px;
   font-weight: 900;
-  margin: 3rem 1rem;
+  margin: 3rem;
   color: var(--default-titles-color);
 }
 
@@ -405,6 +405,12 @@ body {
   grid-column-start: span 2;
 }
 
+.BestSection-img:hover {
+  box-shadow: 0px 0px 5px 0px rgba(92, 102, 96, 0.7);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
 
 /* SECCION CARROUSEL ANIMADO CON BOTONES DE NAVEGACION - INDEX */
 .PhotoCarrousel {
@@ -652,14 +658,6 @@ body {
 }
 
 
-/* ---------------------------------------TESTING------------------------------------------------  */
-
-
-
-
-
-
-
 /* ------------- ESTILOS ABOUT ----------------*/
 .About {
   height: 100%;
@@ -702,7 +700,10 @@ body {
 }
 
 .AboutGrid-card-02{
-  background-image: url('https://rominafont.com/wp-content/uploads/2022/10/IMG_5712-edited.jpg'); 
+  background-image: url('../img/RominaFont_profile.jpg');
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -718,6 +719,7 @@ body {
   justify-content: space-between;
   color: var(--default-white-color);
   padding: 1rem;
+  
 }
 
 .AboutGrid-interaction-input{
@@ -806,7 +808,7 @@ text-align: center;
 }
 
 .AboutGrid-card-07 {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 
 .AboutGrid-form{
@@ -833,6 +835,50 @@ text-align: center;
 .AboutGrid-form-btn{
   width: 40%;
 }
+
+/* ---------------------------------------TESTING------------------------------------------------  */
+
+
+/* ------------- ESTILOS VIEW ----------------*/
+
+.ViewContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ViewContainer-header{
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+  background-position: center;
+}
+
+.ViewContainer-data{
+  display: flex;
+  flex-wrap: wrap;
+margin: 2rem;
+gap: 1rem;
+}
+
+.ViewContainer-tags{
+  width: 40%;
+}
+
+.ViewContainer-text{
+  width: 50%;
+}
+
+.ViewContainer-url{
+  margin: 3rem;
+
+}
+
+.ViewContainer-img{
+  margin: 3rem;
+  width: 70%;
+  height: auto;
+}
+
 
 
 

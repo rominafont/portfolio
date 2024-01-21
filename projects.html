@@ -44,56 +44,11 @@
 
     <main class="Projects Gradient-bg">
         <h1 class="Title">Selected Work & Case Studies</h1>
-        <section class="ProjectsBox">
-            <article class="ProjectsBox-card">
-                <img alt="Project Poster 01" class="ProjectsBox-img"
-                    src="https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D">
-                <!-- Al hover se muestra la info en PC-->
-                <div class="ProjectsBox-info">
-                    <h2 class="ProjectsBox-title Title">Yasta</h2>
-                    <div class="ProjectsBox-tags Text">
-                        <p class="ProjectsBox-role">Product Designer</p>
-                        <p class="ProjectsBox-type">Web</p>
-                        <p class="ProjectsBox-date">2023</p>
-                    </div>
-                </div>
-                
-                <h3 class="MobileDetails Title">Yasta</h3>
-            </article>
-
-            <article class="ProjectsBox-card">
-                <img alt="Project Poster 01" class="ProjectsBox-img"
-                    src="https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D">
-                <!-- Al hover se muestra la info en PC-->
-                <div class="ProjectsBox-info">
-                    <h2 class="ProjectsBox-title Title">Yasta</h2>
-                    <div class="ProjectsBox-tags Text">
-                        <p class="ProjectsBox-role">Product Designer</p>
-                        <p class="ProjectsBox-type">Web</p>
-                        <p class="ProjectsBox-date">2023</p>
-                    </div>
-                </div>
-                
-                <h3 class="MobileDetails Title">Yasta</h3>
-            </article>
-
-            <article class="ProjectsBox-card">
-                <img alt="Project Poster 01" class="ProjectsBox-img"
-                    src="https://images.unsplash.com/photo-1606757819934-d61a9f7279d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBva2V8ZW58MHx8MHx8fDA%3D">
-                <div class="ProjectsBox-info">
-                    <h2 class="ProjectsBox-title Title">Caffeine & Daydreaming</h2>
-                    <div class="ProjectsBox-tags Text">
-                        <p class="ProjectsBox-role">Product Designer</p>
-                        <p class="ProjectsBox-type">Web</p>
-                        <p class="ProjectsBox-date">2023</p>
-                    </div>
-                </div>
-                <h3 class="ProjectsBox-info-mobile Title">Yasta</h3>
-            </article>
-
-
-        </section>
+         <!--------------Tarjetas creadas a partir de los datos que se extraen del JSON----------------->
+       <section class="ProjectsBox" id="projectsContainer"></section>
     </main>
+
+
 
     <!--------------Footer con letras animadas, contacto y copyright----------------->
     <footer class="Footer">
@@ -110,15 +65,53 @@
         </div>
 
         <div class="Copyright">
-            Romina Font 2024 - All Rights Reserved
-        </div>
+            © 2024 - Romina Font
+          </div>
 
     </footer>
 
 
-
-
     <script src="./js/main.js"> </script>
+
+<script>
+
+
+// fetch para traer el json con los proyectos
+document.addEventListener("DOMContentLoaded", function () {
+    const projectsContainer = document.getElementById("projectsContainer");
+
+    
+    const jsonUrl = "./database/projects.json";
+
+    fetch(jsonUrl)
+      .then((response) => response.json())
+      .then((projects) => {
+        projects.forEach((project) => {
+          const projectCard = document.createElement("article");
+          projectCard.classList.add("ProjectsBox-card");
+
+          projectCard.innerHTML = `
+          <a href="./view.html?id=${project.id}">
+            <img alt="${project.name}" class="ProjectsBox-img" src="${project.img}">
+            <div class="ProjectsBox-info">
+                <h2 class="ProjectsBox-title Title">${project.name}</h2>
+                <div class="ProjectsBox-tags Text">
+                    <p class="ProjectsBox-role">${project.role}</p>
+                    <p class="ProjectsBox-type">${project.type}</p>
+                    <p class="ProjectsBox-date">${project.date}</p>
+                </div>
+            </div>
+            <h3 class="MobileDetails Title">${project.name}</h3>
+        </a>
+          `;
+
+          projectsContainer.appendChild(projectCard);
+        });
+      })
+      .catch((error) => console.error("Error fetching project information:", error));
+  });
+
+    </script>
 </body>
 
 </html>
