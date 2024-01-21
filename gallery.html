@@ -8,6 +8,7 @@
 
 
   <!----------- LINKS ------------->
+  <!--Hoja de estilos CSS-->
   <link rel="stylesheet" href="/css/styles.css">
 
   <!------------------------------->
@@ -102,121 +103,6 @@
 
   <script src="./js/main.js"> </script>
 
-
-  <script>
-
-
-    /* Al click de ancla del banner 1 el scroll es smooth*/
-    // Se seleccionan todos los enlaces que comienzan con "#"
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-      anchor.addEventListener('click', function (e) {
-        // previene que que pegue el "salto" al hacer scroll
-        e.preventDefault();
-
-        // se obtiene el valor del id gracias al href
-        const targetId = this.getAttribute('href');
-
-        // se obtiene la posición del id, el destino
-        const targetElement = document.querySelector(targetId);
-
-        // verifica si el destino existe
-        if (targetElement) {
-          // se realiza el scroll de manera suave (smooth)
-          targetElement.scrollIntoView({
-            behavior: 'smooth' // el desplazamiento es suave
-          });
-        }
-      });
-    });
-
-
-    // /* La imagen al click se abre en fullscreen (funciona con imagenes cargadas en el HTML no con fetch)*/
-    // window.onload = () => {
-    //   for (let i of document.querySelectorAll(".Gallery-img")) {
-    //     i.onclick = () => i.classList.toggle("openPhoto");
-    //   }
-    // };
-
-
-    // Traemos las fotografias desde el JSON
-    document.addEventListener("DOMContentLoaded", function () {
-      // selecciona el contenedor de galeria al que me dirijo
-      const galleryBox = document.getElementById("galleryPhotographs");
-
-      // URL del archivo JSON con las URLs de las imágenes
-      const jsonUrl = "./database/photographs.json";
-
-      // Realiza la solicitud Fetch para obtener el JSON
-      fetch(jsonUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          data.forEach((imageData) => {
-            // Crea un elemento de imagen
-            const img = document.createElement("img");
-            img.classList.add("Gallery-img");
-            img.loading = "lazy"; // carga lento para mayor rendimiento
-            img.src = imageData.url; // el url a la carpeta donde esta la imagen
-            img.title = imageData.title; // el titulo de la foto
-
-            // Agrega las imagenes al contenedor de la galería
-            galleryBox.appendChild(img);
-          });
-
-          // Código para abrir la imagen en full screen
-          galleryBox.addEventListener("click", function (event) {
-            // Verifica si el elemento clicado es una imagen con la clase 'Gallery-img'
-            if (event.target.classList.contains("Gallery-img")) {
-              // Alterna la clase 'openPhoto' en la imagen clicada
-              event.target.classList.toggle("openPhoto");
-            }
-          });
-        })
-        .catch((error) => console.error("Error fetching images:", error));
-    });
-
-
-    // Traemos las ilustraciones desde el JSON
-    document.addEventListener("DOMContentLoaded", function () {
-      // selecciona el contenedor de galeria al que me dirijo
-      const galleryBox = document.getElementById("galleryIllustrations");
-
-      // URL del archivo JSON con las URLs de las imágenes
-      const jsonUrl = "./database/illustrations.json";
-
-      // Realiza la solicitud Fetch para obtener el JSON
-      fetch(jsonUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          data.forEach((imageData) => {
-            // Crea un elemento de imagen
-            const img = document.createElement("img");
-            img.classList.add("Gallery-img");
-            img.loading = "lazy"; // carga lento para mayor rendimiento
-            img.src = imageData.url; // el url a la carpeta donde esta la imagen
-            img.title = imageData.title; // el titulo de la foto
-
-            // Agrega las imagenes al contenedor de la galería
-            galleryBox.appendChild(img);
-          });
-
-          // Código para abrir la imagen en full screen
-          galleryBox.addEventListener("click", function (event) {
-            // Verifica si el elemento clicado es una imagen con la clase 'Gallery-img'
-            if (event.target.classList.contains("Gallery-img")) {
-              // Alterna la clase 'openPhoto' en la imagen clicada
-              event.target.classList.toggle("openPhoto");
-            }
-          });
-        })
-        .catch((error) => console.error("Error fetching images:", error));
-    });
-
-
-
-
-
-  </script>
 
 </body>
 

@@ -76,7 +76,6 @@ textarea {
 /* PALETA COLOR */
 /* Primary Palette */
 :root {
-  /*--default-BG-color: #e3cfed;*/
   --default-BG-color: #fcfcfc;
   --default-titles-color: #112d2a;
   --default-black-color: #111111;
@@ -84,16 +83,6 @@ textarea {
   --default-highlight-color: #e2866d;
 }
 
-/* Dark Mode Palette */
-.dark-mode {
-  --darkMode-BG-color: #1b423e;
-  --darkMode-titles-color: #e3cfed;
-  --darkMode-box-color: #5c6660;
-  --darkMode-highlight-color: #e2866d;
-  --darkMode-support-color: #d9b2d7;
-  --darkMode-black-color: #111111;
-  --darkMode-white-color: #EEEEEE;
-}
 
 /* Estilos basicos */
 body {
@@ -129,12 +118,12 @@ body {
   color: var(--default-black-color);
 }
 
-.Link{
+.Link {
   color: var(--default-titles-color);
   font-weight: 900;
 }
 
-.Link:hover{
+.Link:hover {
   color: var(--default-highlight-color);
 }
 
@@ -550,7 +539,7 @@ body {
   transition: transform 0.5s ease-in-out;
   transform: translateY(100%);
   padding-bottom: 25%;
-/* ESTILOS GLASSMORPHISM (trend que hace que las cajas superpuestas parezcan cristales) */
+  /* ESTILOS GLASSMORPHISM (trend que hace que las cajas superpuestas parezcan cristales) */
   background: rgba(227, 207, 237, 0.4);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.1px);
@@ -566,7 +555,8 @@ body {
 .ProjectsBox-title {
   margin: 0;
   font-size: 32px;
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+  ;
   text-align: center;
   text-transform: uppercase;
   color: var(--default-white-color);
@@ -613,7 +603,7 @@ body {
 .ListSection-btn {
   width: 150px;
   position: relative;
-  margin: 20px 0;  
+  margin: 20px 0;
 }
 
 /* Galeria con grid con transicion hover y al click despliega la foto fullscreen - GALERIA */
@@ -631,7 +621,7 @@ body {
   height: 300px;
   background: var(--default-titles-color);
   object-fit: cover;
-  
+
 }
 
 .Gallery-img:hover {
@@ -645,11 +635,12 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /*posiciona la imagen incluso por encima del header y navegación principal*/
+  z-index: 1000;
+  /*posiciona la imagen incluso por encima del header y navegación principal*/
   width: 100vw;
   height: 100vh;
   object-fit: contain;
-  background: rgba(227,207,237, 0.7);
+  background: rgba(227, 207, 237, 0.7);
 }
 
 .Gallery-img.openPhoto:hover {
@@ -690,7 +681,7 @@ body {
   gap: 2rem;
 }
 
-.AboutGrid-card-contact{
+.AboutGrid-card-contact {
   font-size: 30px;
   color: var(--default-highlight-color);
   display: flex;
@@ -699,18 +690,18 @@ body {
   flex-wrap: wrap;
 }
 
-.AboutGrid-card-02{
+.AboutGrid-card-02 {
   background-image: url('../img/RominaFont_profile.jpg');
-  background-size: cover; 
-  background-position: center center; 
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+
 }
 
-.AboutGrid-interaction{
+.AboutGrid-interaction {
   background: rgba(214, 195, 190, 0.56);
   border-radius: 12px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -719,26 +710,26 @@ body {
   justify-content: space-between;
   color: var(--default-white-color);
   padding: 1rem;
-  
+
 }
 
-.AboutGrid-interaction-input{
+.AboutGrid-interaction-input {
   border: 0px;
   padding: 0.5rem;
   background-color: transparent;
-  color:var(--default-white-color);
+  color: var(--default-white-color);
 }
 
 .AboutGrid-interaction-input::placeholder {
-  color:var(--default-white-color);
+  color: var(--default-white-color);
 }
 
-.AboutGrid-interaction-btn{
+.AboutGrid-interaction-btn {
   color: var(--default-white-color);
   font-size: 24px;
 }
 
-.AboutGrid-interaction-salute{
+.AboutGrid-interaction-salute {
   display: none;
   background: rgba(214, 195, 190, 0.5);
   border-radius: 12px;
@@ -748,17 +739,18 @@ body {
   color: var(--default-BG-color);
   padding: 1rem;
   position: relative;
-  animation: salute ease-in 0.7s; 
+  animation: salute ease-in 0.7s;
 }
 
-@keyframes salute{
+@keyframes salute {
   0% {
     transform: translateY(100%);
-      opacity: 0;
+    opacity: 0;
   }
+
   100% {
     transform: translateY(2%);
-      opacity: 100%;
+    opacity: 100%;
   }
 }
 
@@ -770,36 +762,36 @@ body {
   padding: 0.5rem 0;
 }
 
-.AboutGrid-card-year{
+.AboutGrid-card-year {
   font-size: 12px;
-  line-height:10px ;
+  line-height: 10px;
 }
 
-.AboutGrid-tags{
-display: flex;
-flex-wrap: wrap;
-margin: 10px 0px 10px 0px;
+.AboutGrid-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0px 10px 0px;
 }
 
-.AboutGrid-tag{
-padding: 0.2rem 0.7rem;
-margin: 0px 10px 10px 0px;
-color: var(--default-white-color);
-background-color: var(--default-titles-color);
-font-weight: 700;
-font-size: 14px;
-border-radius: 50px;
-text-align: center;
+.AboutGrid-tag {
+  padding: 0.2rem 0.7rem;
+  margin: 0px 10px 10px 0px;
+  color: var(--default-white-color);
+  background-color: var(--default-titles-color);
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 50px;
+  text-align: center;
 }
 
-.AboutGrid-tools{
+.AboutGrid-tools {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   margin: 10px 0px 10px 0px;
 }
 
-.AboutGrid-tool{
+.AboutGrid-tool {
   width: 2rem;
   height: 2rem;
   object-fit: cover;
@@ -811,7 +803,7 @@ text-align: center;
   grid-column: span 3;
 }
 
-.AboutGrid-form{
+.AboutGrid-form {
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -820,60 +812,59 @@ text-align: center;
   gap: 1rem;
 }
 
-.AboutGrid-form-input{
+.AboutGrid-form-input {
   border: 1px solid var(--default-white-color);
   padding: 0.5rem;
   background-color: transparent;
-  color:var(--default-white-color);
+  color: var(--default-white-color);
   border-radius: 12px;
 }
 
 .AboutGrid-form-input::placeholder {
-  color:var(--default-white-color);
+  color: var(--default-white-color);
 }
 
-.AboutGrid-form-btn{
+.AboutGrid-form-btn {
   width: 40%;
 }
-
-/* ---------------------------------------TESTING------------------------------------------------  */
 
 
 /* ------------- ESTILOS VIEW ----------------*/
 
-.ViewContainer{
+.ViewContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.ViewContainer-header{
+
+.ViewContainer-header {
   width: 100vw;
   height: 300px;
   object-fit: cover;
   background-position: center;
 }
 
-.ViewContainer-data{
+.ViewContainer-data {
   display: flex;
   flex-wrap: wrap;
-margin: 2rem;
-gap: 1rem;
+  margin: 2rem;
+  gap: 1rem;
 }
 
-.ViewContainer-tags{
+.ViewContainer-tags {
   width: 40%;
 }
 
-.ViewContainer-text{
+.ViewContainer-text {
   width: 50%;
 }
 
-.ViewContainer-url{
+.ViewContainer-url {
   margin: 3rem;
 
 }
 
-.ViewContainer-img{
+.ViewContainer-img {
   margin: 3rem;
   width: 70%;
   height: auto;
@@ -999,14 +990,14 @@ gap: 1rem;
     display: block;
     text-align: center;
   }
-  
+
 
   .Gallery-box {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .AboutGrid-box {
-    
+
     margin-top: 10%;
     grid-template-columns: 1fr;
   }
@@ -1015,7 +1006,7 @@ gap: 1rem;
     padding: 1.5rem;
   }
 
-  
+
   .AboutGrid-card-contact {
     font-size: 24px;
   }
@@ -1030,13 +1021,21 @@ gap: 1rem;
     font-size: 20px;
   }
 
-  .AboutGrid-card-07  {
+  .AboutGrid-card-07 {
     grid-column: span 1;
   }
 
-  .AboutGrid-card-02  {
+  .AboutGrid-card-02 {
     height: 400px;
   }
 
-  
+  .ViewContainer-tags {
+    width: 100%;
+  }
+
+  .ViewContainer-text {
+    width: 100%;
+  }
+
+
 }

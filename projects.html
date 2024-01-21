@@ -8,6 +8,7 @@
 
 
     <!----------- LINKS ------------->
+    <!--Hoja de estilos CSS-->
     <link rel="stylesheet" href="/css/styles.css">
     <!------------------------------->
 
@@ -44,8 +45,8 @@
 
     <main class="Projects Gradient-bg">
         <h1 class="Title">Selected Work & Case Studies</h1>
-         <!--------------Tarjetas creadas a partir de los datos que se extraen del JSON----------------->
-       <section class="ProjectsBox" id="projectsContainer"></section>
+        <!--------------Tarjetas creadas a partir de los datos que se extraen del JSON----------------->
+        <section class="ProjectsBox" id="projectsContainer"></section>
     </main>
 
 
@@ -66,52 +67,12 @@
 
         <div class="Copyright">
             © 2024 - Romina Font
-          </div>
+        </div>
 
     </footer>
 
 
     <script src="./js/main.js"> </script>
-
-<script>
-
-
-// fetch para traer el json con los proyectos
-document.addEventListener("DOMContentLoaded", function () {
-    const projectsContainer = document.getElementById("projectsContainer");
-
-    
-    const jsonUrl = "./database/projects.json";
-
-    fetch(jsonUrl)
-      .then((response) => response.json())
-      .then((projects) => {
-        projects.forEach((project) => {
-          const projectCard = document.createElement("article");
-          projectCard.classList.add("ProjectsBox-card");
-
-          projectCard.innerHTML = `
-          <a href="./view.html?id=${project.id}">
-            <img alt="${project.name}" class="ProjectsBox-img" src="${project.img}">
-            <div class="ProjectsBox-info">
-                <h2 class="ProjectsBox-title Title">${project.name}</h2>
-                <div class="ProjectsBox-tags Text">
-                    <p class="ProjectsBox-role">${project.role}</p>
-                    <p class="ProjectsBox-type">${project.type}</p>
-                    <p class="ProjectsBox-date">${project.date}</p>
-                </div>
-            </div>
-            <h3 class="MobileDetails Title">${project.name}</h3>
-        </a>
-          `;
-
-          projectsContainer.appendChild(projectCard);
-        });
-      })
-      .catch((error) => console.error("Error fetching project information:", error));
-  });
-
-    </script>
 </body>
 
 </html>
